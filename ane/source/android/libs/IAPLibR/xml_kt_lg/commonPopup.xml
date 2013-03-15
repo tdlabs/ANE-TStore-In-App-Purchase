@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:a="http://schemas.android.com/apk/res/android"
+			  	a:layout_width="fill_parent"
+			  	a:layout_height="fill_parent"
+				a:gravity="center"		   >
+	    <!-- 2. 텍스트 뷰 -->  
+	   	<LinearLayout	a:background="popup_bg_all.9"   
+	   					a:orientation="vertical"
+	   					a:padding="15dp"
+						a:gravity="center"
+						a:layout_width="310dp"
+		    			a:layout_height="236dp"
+							>
+			<TextView  	a:id="commonMessage"
+						a:layout_width="250dp" 
+     					a:layout_height="wrap_content"
+     					a:gravity="center"
+     					a:layout_marginBottom = "40dp"
+     					a:textSize="24pt"
+						a:textColor="#CFCFCF"		/>
+			<Button		a:layout_width="264dp" 
+						a:layout_height="41dp"
+						a:gravity="center"
+						a:offImage_eng="pop_btn_nor_ok_e" 
+						a:onImage_eng="pop_btn_sel_ok_e"
+						a:offImage="pop_btn_nor_ok" 
+						a:onImage="pop_btn_sel_ok"		/>
+						      					
+		</LinearLayout>
+   
+</LinearLayout>

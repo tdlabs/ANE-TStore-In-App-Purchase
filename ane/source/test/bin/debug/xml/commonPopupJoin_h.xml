@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:a="http://schemas.android.com/apk/res/android"
+  a:layout_width="fill_parent"
+  a:layout_height="fill_parent"
+  a:gravity="center">
+  
+  
+  <LinearLayout
+  	a:layout_width="486dp"
+  	a:layout_height="296dp"
+  	a:orientation="vertical"
+  	a:background="popup_bg_all.9"
+	a:gravity="center">
+	
+	
+	<LinearLayout
+	  	a:orientation="vertical"
+	  	a:layout_marginLeft="6dp"	   					
+		a:gravity="center"
+		a:layout_width="fill_parent"
+		a:layout_height="40dp">
+		<TextView
+			a:text="T store 회원가입 "
+			a:text_eng="Register T store "
+			a:textColor="#ffffff"
+			a:shadowColor="#000000"
+			a:textSize="30px"/>
+	</LinearLayout>
+	
+	<LinearLayout
+	  	a:orientation="vertical"
+	  	a:layout_width="435dp"
+		a:layout_height="166dp"
+		>
+		<ScrollView
+			a:layout_width="fill_parent"
+			a:layout_height="fill_parent">
+			<LinearLayout
+				a:orientation="vertical"
+				a:layout_width="fill_parent"
+				a:layout_height="fill_parent">
+				<!-- 1번째 약관 시작!! -->
+				<LinearLayout 
+						a:orientation="horizontal"
+						a:layout_width="fill_parent"
+					    a:layout_height="wrap_content"
+					    a:paddingTop="6dp"
+					    a:paddingLeft="14dp">
+					<LinearLayout 
+							a:orientation="horizontal"
+							a:layout_width="wrap_content"
+						    a:layout_height="wrap_content"
+						    a:gravity="left"
+						    a:layout_weight="1">
+						    <LinearLayout
+						    	a:layout_width="wrap_content"
+						    	a:layout_height="wrap_content">
+							<!-- 이용약관 이미지버튼-->
+								<ImageView
+									a:src="icon_title_01"
+									a:layout_width="2dp"
+									a:layout_height="21dp"/>
+							</LinearLayout>
+							<LinearLayout
+						    	a:layout_width="wrap_content"
+						    	a:layout_height="wrap_content"
+						    	a:paddingleft="6dp">
+								<TextView
+									a:text="이용약관"
+									a:text_eng="Terms and Conditions"
+									a:textSize="21px"
+									a:textColor="#999999"/>
+							</LinearLayout>
+					</LinearLayout>
+					<LinearLayout 
+					   		a:layout_width="wrap_content"
+						    a:layout_height="wrap_content"
+						    a:gravity="right"
+						    a:layout_weight="1"
+						    a:paddingRight="20dp">
+						   	<!-- 약관전체보기 버튼 -->
+							<Button
+								a:id="info1"
+								a:layout_width="96dp"
+								a:layout_height="23dp"
+								a:offImage_eng="btn_terms_nor_b_e" 
+								a:onImage_eng="btn_terms_sel_b_e"
+								a:offImage="btn_terms_nor_b" 
+								a:onImage="btn_terms_sel_b"/>
+						</LinearLayout>
+				</LinearLayout>
+				<!-- 이용약관 내용 이미지 -->
+				<LinearLayout 
+						a:orientation="vertical"
+						a:layout_width="415dp"
+					    a:layout_height="72dp"
+					    a:paddingTop="7dp">
+					    
+					    <!-- text bg 분할한 것 넣기 -->
+				  		<LinearLayout
+				  			a:orientation="horizontal"
+				  			a:layout_width="415dp"
+				  			a:layout_height="8dp">
+				  			<LinearLayout
+					  			a:layout_width="8dp"
+					  			a:layout_height="8dp"
+					  			a:background="textbox_01_1"/>
+				  			<LinearLayout
+					  			a:layout_width="399dp"
+					  			a:layout_height="8dp"
+					  			a:background="textbox_01_2"/>
+					  		<LinearLayout
+					  			a:layout_width="8dp"
+					  			a:layout_height="8dp"
+					  			a:background="textbox_01_3"/>
+				  		</LinearLayout>
+				  		
+				  		<LinearLayout
+				  			a:orientation="horizontal"
+				  			a:layout_width="415dp"
+				  			a:layout_height="49dp">
+				  			<LinearLayout
+					  			a:layout_width="8dp"
+					  			a:layout_height="49dp"
+					  			a:background="textbox_01_4"/>
+					  		<TextView
+					  			a:layout_width="399dp"
+					  			a:layout_height="49dp"
+					  			a:background="textbox_01_5"
+					  			a:text="서비스 이용조건 및 절차 등 기본적인 사항을 규정하여 회원의 권익을 보호함을 목적으로 합니다.
+제2조 (약관의 "
+					  			a:textSize="24px"
+					  			a:textColor="#999999"/>
+					  		<LinearLayout
+					  			a:layout_width="8dp"
+					  			a:layout_height="49dp"
+					  			a:background="textbox_01_6"/>
+				  		</LinearLayout>	 
+				  		
+				  		<LinearLayout
+				  			a:orientation="horizontal"
+				  			a:layout_width="415dp"
+				  			a:layout_height="8dp">
+				  			<LinearLayout
+					  			a:layout_width="8dp"
+					  			a:layout_height="8dp"
+					  			a:background="textbox_01_7"/>
+				  			<LinearLayout
+					  			a:layout_width="399dp"
+					  			a:layout_height="8dp"
+					  			a:background="textbox_01_8"/>
+					  		<LinearLayout
+					  			a:layout_width="8dp"
+					  			a:layout_height="8dp"
+					  			a:background="textbox_01_9"/>
+				  		</LinearLayout>   
+			  		</LinearLayout>
+			  	<!-- 리니어 레이아웃 안에 체크박스랑 텍스트뷰 horizontal로 만들기 -->
+				<LinearLayout 
+						a:orientation="horizontal"	
+						a:gravity="center"
+						a:layout_width="wrap_content"
+					    a:layout_height="wrap_content"
+					    a:paddingTop="7dp">
+					    <CheckBox
+					    	a:checkid="info_checkbox1"
+					    	a:layout_width="27dp"
+					    	a:layout_height="25.5dp"
+					    	a:xlayout_width="34dp"
+					    	a:xlayout_height="32dp"
+					    	a:onImage="checkbox_n"
+					    	a:layout_marginLeft="12.6dp"/>
+					    <TextView
+					    	a:id="JoinAgree"
+							a:layout_marginLeft="10dp"
+							a:layout_marginRight="10dp"
+							a:textColor="#999999" 
+							a:text="위의 이용약관에 동의합니다."
+							a:text_eng="I accept the above terms and conditions."
+							a:textSize="21px"/>
+				</LinearLayout>
+				<!-- 1번째 약관 끝-->
+				<!-- 2번째 약관 시작!! -->
+				<LinearLayout 
+						a:orientation="horizontal"
+						a:layout_width="fill_parent"
+					    a:layout_height="wrap_content"
+					    a:paddingTop="6dp"
+					    a:paddingLeft="14dp">
+					<LinearLayout 
+							a:orientation="horizontal"
+							a:layout_width="wrap_content"
+						    a:layout_height="wrap_content"
+						    a:gravity="left"
+						    a:layout_weight="1">
+						    <LinearLayout
+						    	a:layout_width="wrap_content"
+						    	a:layout_height="wrap_content">
+							<!-- 이용약관 이미지버튼-->
+								<ImageView
+									a:src="icon_title_01"
+									a:layout_width="2dp"
+									a:layout_height="21dp"/>
+							</LinearLayout>
+							<LinearLayout
+						    	a:layout_width="wrap_content"
+						    	a:layout_height="wrap_content"
+						    	a:paddingleft="6dp">
+								<TextView
+									a:text="Tstore 캐쉬 이용약관"
+									a:text_eng="Terms Tstore cache"
+									a:textSize="21px"
+									a:textColor="#999999"/>
+							</LinearLayout>
+					</LinearLayout>
+					<LinearLayout 
+					   		a:layout_width="wrap_content"
+						    a:layout_height="wrap_content"
+						    a:gravity="right"
+						    a:layout_weight="1"
+						    a:paddingRight="20dp">
+						   	<!-- 약관전체보기 버튼 -->
+							<Button
+								a:id="info2"
+								a:layout_width="96dp"
+								a:layout_height="23dp"
+								a:offImage_eng="btn_terms_nor_b2_e" 
+								a:onImage_eng="btn_terms_sel_b2_e"
+								a:offImage="btn_terms_nor_b2" 
+								a:onImage="btn_terms_sel_b2"/>
+						</LinearLayout>
+				</LinearLayout>
+				<!-- 이용약관 내용 이미지 -->
+				<LinearLayout 
+						a:orientation="vertical"
+						a:layout_width="415dp"
+					    a:layout_height="72dp"
+					    a:paddingTop="7dp">
+					    
+					    <!-- text bg 분할한 것 넣기 -->
+				  		<LinearLayout
+				  			a:orientation="horizontal"
+				  			a:layout_width="415dp"
+				  			a:layout_height="8dp">
+				  			<LinearLayout
+					  			a:layout_width="8dp"
+					  			a:layout_height="8dp"
+					  			a:background="textbox_01_1"/>
+				  			<LinearLayout
+					  			a:layout_width="399dp"
+					  			a:layout_height="8dp"
+					  			a:background="textbox_01_2"/>
+					  		<LinearLayout
+					  			a:layout_width="8dp"
+					  			a:layout_height="8dp"
+					  			a:background="textbox_01_3"/>
+				  		</LinearLayout>
+				  		
+				  		<LinearLayout
+				  			a:orientation="horizontal"
+				  			a:layout_width="415dp"
+				  			a:layout_height="49dp">
+				  			<LinearLayout
+					  			a:layout_width="8dp"
+					  			a:layout_height="49dp"
+					  			a:background="textbox_01_4"/>
+					  		<TextView
+					  			a:layout_width="399dp"
+					  			a:layout_height="49dp"
+					  			a:background="textbox_01_5"
+					  			a:text="제1조 (목적) 
+
+본 약관은 SK플래닛 주식회사(이하 '회사'라 합니다)가 운영하는 인터넷사이트(http://www.tstore.co."
+					  			a:textSize="24px"
+					  			a:textColor="#999999"/>
+					  		<LinearLayout
+					  			a:layout_width="8dp"
+					  			a:layout_height="49dp"
+					  			a:background="textbox_01_6"/>
+				  		</LinearLayout>	 
+				  		
+				  		<LinearLayout
+				  			a:orientation="horizontal"
+				  			a:layout_width="415dp"
+				  			a:layout_height="8dp">
+				  			<LinearLayout
+					  			a:layout_width="8dp"
+					  			a:layout_height="8dp"
+					  			a:background="textbox_01_7"/>
+				  			<LinearLayout
+					  			a:layout_width="399dp"
+					  			a:layout_height="8dp"
+					  			a:background="textbox_01_8"/>
+					  		<LinearLayout
+					  			a:layout_width="8dp"
+					  			a:layout_height="8dp"
+					  			a:background="textbox_01_9"/>
+				  		</LinearLayout>   
+			  		</LinearLayout>
+			  	<!-- 리니어 레이아웃 안에 체크박스랑 텍스트뷰 horizontal로 만들기 -->
+				<LinearLayout 
+						a:orientation="horizontal"	
+						a:gravity="center"
+						a:layout_width="wrap_content"
+					    a:layout_height="wrap_content"
+					    a:paddingTop="7dp">
+					    <CheckBox
+					    	a:checkid="info_checkbox2"
+					    	a:layout_width="27dp"
+					    	a:layout_height="25.5dp"
+					    	a:xlayout_width="34dp"
+					    	a:xlayout_height="32dp"
+					    	a:onImage="checkbox_n"
+					    	a:layout_marginLeft="12.6dp"/>
+					    <TextView
+					    	a:id="JoinAgree"
+							a:layout_marginLeft="10dp"
+							a:layout_marginRight="10dp"
+							a:textColor="#999999" 
+							a:text="위의 이용약관에 동의합니다."
+							a:text_eng="I accept the above terms and conditions."
+							a:textSize="21px"/>
+				</LinearLayout>
+				<!-- 2번째 약관 끝-->
+				<!-- 3번째 약관 시작!! -->
+				<LinearLayout 
+						a:orientation="horizontal"
+						a:layout_width="fill_parent"
+					    a:layout_height="wrap_content"
+					    a:paddingTop="6dp"
+					    a:paddingLeft="14dp">
+					<LinearLayout 
+							a:orientation="horizontal"
+							a:layout_width="wrap_content"
+						    a:layout_height="wrap_content"
+						    a:gravity="left"
+						    a:layout_weight="1">
+						    <LinearLayout
+						    	a:layout_width="wrap_content"
+						    	a:layout_height="wrap_content">
+							<!-- 이용약관 이미지버튼-->
+								<ImageView
+									a:src="icon_title_01"
+									a:layout_width="2dp"
+									a:layout_height="21dp"/>
+							</LinearLayout>
+							<LinearLayout
+						    	a:layout_width="wrap_content"
+						    	a:layout_height="wrap_content"
+						    	a:paddingleft="6dp">
+								<TextView
+									a:text="개인정보보호정책"
+									a:text_eng="Privacy Policy"
+									a:textSize="21px"
+									a:textColor="#999999"/>
+							</LinearLayout>
+					</LinearLayout>
+					<LinearLayout 
+					   		a:layout_width="wrap_content"
+						    a:layout_height="wrap_content"
+						    a:gravity="right"
+						    a:layout_weight="1"
+						    a:paddingRight="20dp">
+						   	<!-- 약관전체보기 버튼 -->
+							<Button
+								a:id="info3"
+								a:layout_width="96dp"
+								a:layout_height="23dp"
+								a:offImage_eng="btn_policy_nor_b_e" 
+								a:onImage_eng="btn_policy_sel_b_e"
+								a:offImage="btn_policy_nor_b" 
+								a:onImage="btn_policy_sel_b"/>
+						</LinearLayout>
+				</LinearLayout>
+				<!-- 이용약관 내용 이미지 -->
+				<LinearLayout 
+						a:orientation="vertical"
+						a:layout_width="415dp"
+					    a:layout_height="72dp"
+					    a:paddingTop="7dp">
+					    
+					    <!-- text bg 분할한 것 넣기 -->
+				  		<LinearLayout
+				  			a:orientation="horizontal"
+				  			a:layout_width="415dp"
+				  			a:layout_height="8dp">
+				  			<LinearLayout
+					  			a:layout_width="8dp"
+					  			a:layout_height="8dp"
+					  			a:background="textbox_01_1"/>
+				  			<LinearLayout
+					  			a:layout_width="399dp"
+					  			a:layout_height="8dp"
+					  			a:background="textbox_01_2"/>
+					  		<LinearLayout
+					  			a:layout_width="8dp"
+					  			a:layout_height="8dp"
+					  			a:background="textbox_01_3"/>
+				  		</LinearLayout>
+				  		
+				  		<LinearLayout
+				  			a:orientation="horizontal"
+				  			a:layout_width="415dp"
+				  			a:layout_height="49dp">
+				  			<LinearLayout
+					  			a:layout_width="8dp"
+					  			a:layout_height="49dp"
+					  			a:background="textbox_01_4"/>
+					  		<TextView
+					  			a:layout_width="399dp"
+					  			a:layout_height="49dp"
+					  			a:background="textbox_01_5"
+					  			a:text="T store 개인 정보 취급 방침
+
+- SK플래닛주식회사(이하 “회사”라 함)가 제공하는 모바일 컨텐츠 전자상거래 "
+					  			a:textSize="24px"
+					  			a:textColor="#999999"/>
+					  		<LinearLayout
+					  			a:layout_width="8dp"
+					  			a:layout_height="49dp"
+					  			a:background="textbox_01_6"/>
+				  		</LinearLayout>	 
+				  		
+				  		<LinearLayout
+				  			a:orientation="horizontal"
+				  			a:layout_width="415dp"
+				  			a:layout_height="8dp">
+				  			<LinearLayout
+					  			a:layout_width="8dp"
+					  			a:layout_height="8dp"
+					  			a:background="textbox_01_7"/>
+				  			<LinearLayout
+					  			a:layout_width="399dp"
+					  			a:layout_height="8dp"
+					  			a:background="textbox_01_8"/>
+					  		<LinearLayout
+					  			a:layout_width="8dp"
+					  			a:layout_height="8dp"
+					  			a:background="textbox_01_9"/>
+				  		</LinearLayout>   
+			  		</LinearLayout>
+			  	<!-- 리니어 레이아웃 안에 체크박스랑 텍스트뷰 horizontal로 만들기 -->
+				<LinearLayout 
+						a:orientation="horizontal"	
+						a:gravity="center"
+						a:layout_width="wrap_content"
+					    a:layout_height="wrap_content"
+					    a:paddingTop="7dp">
+					    <CheckBox
+					    	a:checkid="info_checkbox3"
+					    	a:layout_width="27dp"
+					    	a:layout_height="25.5dp"
+					    	a:xlayout_width="34dp"
+					    	a:xlayout_height="32dp"
+					    	a:onImage="checkbox_n"
+					    	a:layout_marginLeft="12.6dp"/>
+					    <TextView
+					    	a:id="JoinAgree"
+							a:layout_marginLeft="10dp"
+							a:layout_marginRight="10dp"
+							a:textColor="#999999" 
+							a:text="위의 이용약관에 동의합니다."
+							a:text_eng="I accept the above terms and conditions."
+							a:textSize="21px"/>
+				</LinearLayout>
+				<!-- 3번째 약관 끝-->
+			</LinearLayout>
+		</ScrollView>
+	</LinearLayout>
+	
+	<LinearLayout   a:orientation="vertical"
+					a:layout_marginRight="8dp"
+					a:layout_width="463dp"
+   					a:layout_height="53dp"
+   					a:gravity="center"	> 
+	  	<LinearLayout 
+				a:orientation="horizontal"  
+				a:gravity="center"
+				a:layout_width="486dp"
+			    a:layout_height="56dp"
+			    >
+			    <LinearLayout
+			    	a:layout_width="wrap_content"
+			    	a:layout_height="wrap_content"
+			    	a:paddingRight="3dp">
+					<Button		
+						a:layout_width="131dp" 
+						a:layout_height="41dp"
+						a:gravity="center"
+						a:offImage_eng="btn_con_nor_e"
+						a:onImage_eng="btn_con_sel_e"
+						a:offImage="btn_con_nor" 
+						a:onImage="btn_con_sel"		
+						/>
+				</LinearLayout>
+				<LinearLayout
+			    	a:layout_width="wrap_content"
+			    	a:layout_height="wrap_content"
+			    	a:paddingleft="3dp">
+					<Button		
+						a:layout_width="131dp" 
+						a:layout_height="41dp"
+						a:gravity="center"
+						a:offImage_eng="btn_cancel_nor_h_e" 
+						a:onImage_eng="btn_cancel_sel_h_e"
+						a:offImage="btn_cancel_nor_h" 
+						a:onImage="btn_cancel_sel_h"
+								/> 
+				</LinearLayout>
+			</LinearLayout>
+  	</LinearLayout>
+  </LinearLayout>
+</LinearLayout>

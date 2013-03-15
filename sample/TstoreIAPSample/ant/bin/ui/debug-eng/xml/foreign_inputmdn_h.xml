@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:a="http://schemas.android.com/apk/res/android"
+    a:layout_width="fill_parent"
+    a:layout_height="fill_parent"
+    a:gravity="center"
+    a:orientation="vertical">
+    
+    <LinearLayout
+    	a:gravity="center"
+    	a:background="popup_bg_all.9"
+    	a:orientation="vertical"
+	  	a:layout_width="490dp"
+	    a:layout_height="wrap_content">
+	    
+         <!-- 타이틀 -->
+		<TextView
+			a:textSize="26pt"
+		    a:gravity="center"
+		    a:text="MDN입력"
+		    a:text_eng="MDN input"
+		    a:textColor="#ffffff"
+			a:shadowColor="#000000"
+			a:layout_width="fill_parent"
+	    	a:layout_height="43dp"/>
+		<LinearLayout  
+		    a:gravity="center"
+			a:background="title_line01"
+			a:layout_marginRight="5dp"
+			a:layout_width="456dp"
+	    	a:layout_height="2dp"/>
+		
+        <LinearLayout
+		  	a:orientation="vertical"
+		  	a:layout_width="fill_parent"
+			a:layout_height="wrap_content"
+			a:gravity="center">
+			
+			<ScrollView
+				a:layout_width="450dp"
+				a:layout_height="195dp">	
+				<LinearLayout
+					a:orientation="vertical"
+					a:layout_width="440dp"
+					a:layout_height="fill_parent">
+					<LinearLayout
+						a:layout_marginLeft="10dp"
+						a:gravity="center"
+					    a:orientation="vertical"
+					    a:layout_marginTop="15dp"
+					    a:layout_marginBottom="11dp"
+					   	a:layout_width= "fill_parent" 
+					   	a:layout_height="wrap_content">
+					   	<!-- 통신사 선택 -->
+					   	<LinearLayout 
+			    		  	a:textSize="20pt"
+					    	a:orientation="vertical"
+					   		a:layout_width= "fill_parent" 
+					   		a:layout_height="wrap_content">
+			        		
+					   	    <LinearLayout
+								a:orientation="horizontal"
+								a:layout_width="fill_parent"
+								a:layout_height="wrap_content"
+								a:layout_marginTop="15dp"
+								a:layout_marginBottom="10dp">
+								<LinearLayout
+									a:background="icon_bullet"
+									a:layout_width="4dp"
+				    	  			a:layout_height="21dp">
+								</LinearLayout>
+								
+				        		<TextView
+				            		a:layout_width="fill_parent"
+				            		a:layout_height="21dp"
+				            		a:layout_marginLeft="5dp"
+				            		a:text="통신사 선택"
+				            		a:text_eng="Select your carrier"
+				            		a:textSize="25px"
+				            		a:textColor="#ffffff"/>
+			        		</LinearLayout>
+			        		
+			        		
+					   		<RadioGroup
+					   		    a:id="@+id/radioGroup"
+					   		    a:checkedButton="@+id/defaultRadio"
+					   		    a:orientation="horizontal"
+					   		   	a:layout_width= "fill_parent" 
+					   			a:layout_height="wrap_content">
+				        		<LinearLayout
+									a:orientation="horizontal"
+									a:layout_width="147dp"
+									a:layout_height="wrap_content">
+						   		    <RadioButton 
+						   		    	a:id="foreignInputRadio1"
+						   		        a:layout_width="21dp"
+						   		        a:layout_height="21dp"
+						   		        a:onImage="radio_bt_nor" 
+										a:checkImage="radio_bt_sel"/>
+						   		    <TextView
+						   		        a:layout_width="67dp"
+						   		        a:layout_height="wrap_content"
+						   		        a:text="SKT"
+						   		        a:layout_marginLeft="9dp"/>
+					   		    </LinearLayout>
+					   		    <LinearLayout
+									a:orientation="horizontal"
+									a:layout_width="129dp"
+									a:layout_height="wrap_content">
+						   		    <RadioButton 
+						   		   		a:id="foreignInputRadio2"
+						   		        a:layout_width="21dp"
+						   		        a:layout_height="21dp"
+						   		        a:onImage="radio_bt_nor" 
+										a:checkImage="radio_bt_sel"/>
+						   		    <TextView
+						   		        a:layout_width="59dp"
+						   		        a:layout_height="wrap_content"
+						   		        a:text="KT"
+						   		        a:layout_marginLeft="9dp"/>
+								</LinearLayout>   	
+								<LinearLayout
+									a:orientation="horizontal"
+									a:layout_width="wrap_content"
+									a:layout_height="wrap_content">	
+						   		    <RadioButton 
+						   		   		a:id="foreignInputRadio3"
+						   		        a:layout_width="21dp"
+						   		        a:layout_height="21dp"
+						   		        a:onImage="radio_bt_nor" 
+										a:checkImage="radio_bt_sel"/>	 
+									<TextView
+					   		        	a:layout_width="67dp"
+						   		        a:layout_height="wrap_content"
+						   		        a:text="LG U+"
+						   		        a:layout_marginLeft="9dp"/>
+								</LinearLayout>
+					   		</RadioGroup>
+					   	</LinearLayout>
+					   	
+					   	<!-- MDN 입력 -->
+					   	<LinearLayout
+					   	    a:layout_width="fill_parent"
+					   	    a:layout_height="fill_parent"
+					   	    a:orientation="vertical" >
+			        		<LinearLayout
+								a:orientation="horizontal"
+								a:layout_width="fill_parent"
+								a:layout_height="wrap_content"
+								a:layout_marginTop="15dp"
+								a:layout_marginBottom="10dp">
+								<LinearLayout
+									a:background="icon_bullet"
+									a:layout_width="4dp"
+				    	  			a:layout_height="21dp">
+								</LinearLayout>
+								
+				        		<TextView
+				            		a:layout_width="fill_parent"
+				            		a:layout_height="21dp"
+				            		a:layout_marginLeft="5dp"
+				            		a:text="MDN 입력"
+				            		a:text_eng="MDN input"
+				            		a:textSize="25px"
+				            		a:textColor="#ffffff"/>
+			        		</LinearLayout>
+					   		<LinearLayout 
+					   			a:orientation="horizontal"
+					   			a:layout_width= "fill_parent" 
+					   			a:layout_height="wrap_content">
+				    		 	<EditText 	
+				    		 	    a:id="MDN1"
+				    		 	    a:background="input_box_nor2.9"
+				    				a:layout_width="81dp"
+				    				a:layout_height="30dp"
+				    				a:maxLength="3"	
+				    				a:layout_marginLeft="3dp"
+	    							a:textColor="#CCCCCC"/>
+				    			<EditText 	
+				    		 	    a:id="MDN2"
+				    		 	    a:background="input_box_nor2.9"
+				    				a:layout_width="81dp"
+				    				a:layout_height="30dp"
+				    				a:maxLength="4"	
+				    		  		a:layout_marginLeft="8dp"
+	    							a:textColor="#CCCCCC"/>
+				    			 <EditText  	
+				    		 	    a:id="MDN3"
+				    		 	    a:background="input_box_nor2.9"	
+				    		   		a:layout_width="81dp"
+				    		  		a:layout_height="30dp"
+				    		  		a:maxLength="4"	
+				    		  		a:layout_marginLeft="8dp"
+	    							a:textColor="#CCCCCC"/>
+					   		</LinearLayout>
+					   	</LinearLayout>	
+					   		
+					   	<!-- 주민등록번호 입력 -->
+					   	<LinearLayout 
+					   	    a:id = "jiminNumberLlView"
+					    	a:orientation="vertical"
+					   		a:layout_width= "fill_parent" 
+					   		a:layout_height="wrap_content">
+			        		<LinearLayout
+								a:orientation="horizontal"
+								a:layout_width="fill_parent"
+								a:layout_height="wrap_content"
+								a:layout_marginTop="15dp"
+								a:layout_marginBottom="10dp">
+								<LinearLayout
+									a:background="icon_bullet"
+									a:layout_width="4dp"
+				    	  			a:layout_height="21dp">
+								</LinearLayout>
+								
+				        		<TextView
+				            		a:layout_width="fill_parent"
+				            		a:layout_height="21dp"
+				            		a:layout_marginLeft="5dp"
+				            		a:text="주민등록번호 입력"
+				            		a:text_eng="Enter the social security number"
+				            		a:textSize="25px"
+				            		a:textColor="#CCCCCC"/>
+			        		</LinearLayout>
+			     			<LinearLayout
+			     			    a:orientation="horizontal"
+				    			a:layout_width="fill_parent"
+				    			a:layout_height="wrap_content"
+				    			a:focusableInTouchMode="true" 
+				    			a:layout_marginTop="7dp">
+				        		<EditText
+				        		    a:id ="JuminText1"
+			    		   			a:layout_width="126dp"
+			    		 	    	a:background="input_box_nor2.9"
+			    		  			a:layout_height="30dp"
+			    		  			a:maxLength="6"	
+			    		  			a:layout_marginLeft="3dp"
+	    							a:textColor="#CCCCCC"/>
+			    		   		<EditText 	
+			    		   		    a:id ="JuminText2"
+			    		 	    	a:background="input_box_nor2.9"
+			    		   			a:layout_width="126dp"
+			    		  			a:layout_height="30dp"
+			    		  			a:password="true"
+			    		  			a:maxLength="7"	
+			    		  			a:layout_marginLeft="8dp"
+	    							a:textColor="#CCCCCC"/>
+				    			</LinearLayout>	   		
+					   	</LinearLayout>
+					</LinearLayout>
+				    
+				</LinearLayout>
+			</ScrollView>
+		</LinearLayout>
+		
+       <LinearLayout 
+			a:layout_width="fill_parent"
+			a:layout_height="56dp"
+			a:layout_marginBottom="35dp"
+			a:gravity="center" >
+			<Button 
+			    a:id="foreignBtn"
+				a:layout_width="131dp" 
+				a:layout_height="41dp" 
+				a:offImage_eng="btn_con_nor_e"
+				a:onImage_eng="btn_con_sel_e"
+				a:offImage="btn_con_nor" 
+				a:onImage="btn_con_sel"/>
+		</LinearLayout>
+		 
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,17 @@
+# Adobe AIR SDK 路徑
+sdk.home = /Applications/Adobe Flash Builder 4.7/sdks/4.6.0_air3.5
+
+# .p12開發者證書文件
+android.keystore.file = /Users/zhangamatsubasa/Documents/joyclouds/pubcode/certificate/jc_android_distribution.p12
+
+# 開發者證書密碼
+android.keystore.password = 12345
+
+# ane文件夾路徑,指向ane文件夾所在的路徑
+ane.dir = /Users/zhangamatsubasa/Documents/joyclouds/pubcode/plugins/kr_3
+
+# 導出的apk存放的文件夾路徑
+release.dir = /Users/zhangamatsubasa/Documents/Adobe Flash Builder 4.7/TstoreIAPSample/ant/release
+
+# 打包到apk中使用的swf文件夾路徑
+swf.dir = /Users/zhangamatsubasa/Documents/Adobe Flash Builder 4.7/TstoreIAPSample/bin-release-temp

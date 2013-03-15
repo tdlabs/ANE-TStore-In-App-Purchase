@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:a="http://schemas.a.com/apk/res/a"
+			    a:orientation="vertical"
+			    a:layout_width="fill_parent"
+			    a:layout_height="fill_parent"
+			    a:gravity="center">
+	    
+	    <LinearLayout a:orientation="vertical"
+		    		  a:layout_width="466dp"
+		    		  a:layout_height="300dp"
+	    			  a:background="popup_bg_all.9"
+	    			  a:layout_marginTop="20dp"
+		    		  a:layout_marginLeft="15dp">
+	    			  
+	    			  <ImageView a:background="pop_title"
+	    			  			 a:background_eng="pop_title_e"
+						 		 a:layout_gravity="center"
+								 a:layout_width="72dp"
+								 a:layout_height="20dp"
+								 a:layout_marginTop="12dp"/>
+					  <LinearLayout a:orientation="vertical"
+					 				a:layout_width="wrap_content"
+	    							a:layout_height="wrap_content">
+	    							
+	    			  				<LinearLayout   
+			a:orientation="horizontal"
+			a:background="info_table_02.9"
+			a:layout_width="420dp"
+			a:layout_height="105dp"	
+			a:layout_marginTop="10dp"
+			a:layout_marginLeft="5dp"
+			a:layout_marginRight="5dp"
+			a:layout_gravity="center">
+			<LinearLayout   
+				a:orientation="vertical"
+				a:layout_width="95dp"
+		    	a:layout_height="105dp"	
+		    	a:layout_marginTop="7dp"
+		    	a:layout_marginLeft="20dp">
+		    	<TextView  	
+	    	  		a:layout_width="95dp" 
+					a:layout_height="0dp"
+					a:textSize="22pt" 
+					a:layout_weight="1"
+					a:text="상품명"
+					a:text_eng="Product"
+					a:textColor="#999999"/>
+				<TextView  	
+					a:layout_width="95dp" 
+					a:layout_height="0dp"
+					a:textSize="20pt" 
+					a:layout_weight="1"
+					a:text="사용기간"
+					a:text_eng="permissible period"
+					a:textColor="#999999"/>  
+				<TextView  	
+					a:layout_width="95dp" 
+					a:layout_height="0dp"
+					a:textSize="20pt" 
+					a:layout_weight="1"
+					a:text="결제금액(월별)"
+					a:text_eng="Final Payments(Month)"
+					a:textColor="#999999"/>
+	    	</LinearLayout>
+			<LinearLayout   
+				a:orientation="vertical"
+				a:layout_width="wrap_content"
+		    	a:layout_height="105dp"	
+		    	a:layout_marginTop="7dp"
+		    	a:layout_marginLeft="55dp">
+		    	<!--  정보시작 Start -->
+	    		<TextView  	
+	    			a:id = "ItemName"
+	    	  		a:layout_width="wrap_content" 
+					a:layout_height="0dp"
+					a:textSize="22pt" 
+					a:layout_weight="1"
+					a:textColor="#CFCFCF"/>
+				<TextView  	
+					a:id = "ItemUseDate"
+					a:layout_width="wrap_content" 
+					a:layout_height="0dp"
+					a:textSize="20pt" 
+					a:layout_weight="1"
+					a:textColor="#999999"/>  
+				<TextView  	
+					a:id = "ItemPrice"
+					a:layout_width="wrap_content" 
+					a:layout_height="0dp"
+					a:textSize="22pt" 
+					a:layout_weight="1"
+					a:textColor="#CFCFCF"/>
+		    	<!--  정보시작 End -->
+	    	</LinearLayout>
+	   </LinearLayout> 
+		    						
+		    						<LinearLayout
+									  	a:orientation="vertical"
+									  	a:layout_width="445dp"
+										a:layout_height="65dp"
+										a:layout_marginTop="10dp">
+								    <ScrollView
+												a:layout_width="fill_parent"
+												a:layout_height="fill_parent">
+					     		
+					     			<LinearLayout
+											a:orientation="vertical"
+											a:layout_width="fill_parent"
+											a:layout_height="fill_parent">
+		    						
+		    						
+		    						
+		    						<!-- 월별 자동결제 안내문 -->
+		    						<LinearLayout 
+										a:orientation="horizontal"
+										a:layout_width="fill_parent"
+									    a:layout_height="wrap_content"
+									    a:layout_marginTop="8dp"
+									    a:paddingLeft="17dp">
+						    				<LinearLayout 
+												a:orientation="horizontal"
+												a:layout_width="wrap_content"
+											    a:layout_height="wrap_content"
+											    a:layout_weight="1"
+											    a:gravity="left">
+											    <LinearLayout
+											    	a:layout_width="wrap_content"
+											    	a:layout_height="wrap_content">
+											    <!-- 이용약관 이미지버튼-->
+													<ImageView
+														a:src="icon_title_01"
+														a:layout_width="2dp"
+														a:layout_height="21dp"/>
+												</LinearLayout>
+												<LinearLayout
+											    	a:layout_width="wrap_content"
+											    	a:layout_height="wrap_content"
+											    	a:paddingLeft="6dp">
+													<TextView
+														a:text="월별자동결제 상품 "
+														a:text_eng="Monthly automatic payment product"
+														a:textSize="21px"
+														a:textColor="#999999"
+														/>
+												</LinearLayout>
+											</LinearLayout>
+											<LinearLayout 
+										   		a:layout_width="wrap_content"
+											    a:layout_height="wrap_content"
+											    a:gravity="right"
+											    a:layout_weight="1"
+											    a:layout_marginRight="125dp">
+											   	<!-- 약관전체보기 버튼 -->
+												<Button
+													a:id="info1"
+													a:layout_width="96dp"
+													a:layout_height="23dp"
+													a:offImage_eng="btn_info01_nor_e" 
+													a:onImage_eng="btn_info01_sel_e"
+													a:offImage="btn_info01_nor" 
+													a:onImage="btn_info01_sel"/>
+											</LinearLayout>
+					
+									</LinearLayout>
+		    						<LinearLayout 
+										a:orientation="horizontal"
+										a:layout_width="455dp"
+									    a:layout_height="42dp">
+			    						<LinearLayout 
+											a:orientation="vertical"
+											a:layout_width="322dp"
+										    a:layout_height="42dp"
+										    a:paddingTop="7dp"
+										    >
+										    
+										    <!-- text bg 분할한 것 넣기 -->
+									  		<LinearLayout
+									  			a:orientation="horizontal"
+									  			a:layout_width="306dp"
+									  			a:layout_height="8dp"
+									  			a:layout_marginLeft="17dp">
+									  			<LinearLayout
+										  			a:layout_width="8dp"
+										  			a:layout_height="8dp"
+										  			a:background="textbox_01_1"/>
+									  			<LinearLayout
+										  			a:layout_width="290dp"
+										  			a:layout_height="8dp"
+										  			a:background="textbox_01_2"/>
+										  		<LinearLayout
+										  			a:layout_width="8dp"
+										  			a:layout_height="8dp"
+										  			a:background="textbox_01_3"/>
+									  		</LinearLayout>
+									  		
+									  		<LinearLayout
+									  			a:orientation="horizontal"
+									  			a:layout_width="306dp"
+									  			a:layout_height="19dp"
+									  			a:layout_marginLeft="17dp">
+									  			<LinearLayout
+										  			a:layout_width="8dp"
+										  			a:layout_height="19dp"
+										  			a:background="textbox_01_4"/>
+										  		<TextView
+										  			a:layout_width="290dp"
+										  			a:layout_height="19dp"
+										  			a:background="textbox_01_5"
+										  			a:textcontent=""
+										  			a:textSize="24px"
+										  			a:textColor="#999999"/>
+										  		<LinearLayout
+										  			a:layout_width="8dp"
+										  			a:layout_height="19dp"
+										  			a:background="textbox_01_6"/>
+									  		</LinearLayout>	 
+									  		
+									  		<LinearLayout
+									  			a:orientation="horizontal"
+									  			a:layout_width="306dp"
+									  			a:layout_height="8dp"
+									  			a:layout_marginLeft="17dp">
+									  			<LinearLayout
+										  			a:layout_width="8dp"
+										  			a:layout_height="8dp"
+										  			a:background="textbox_01_7"/>
+									  			<LinearLayout
+										  			a:layout_width="290dp"
+										  			a:layout_height="8dp"
+										  			a:background="textbox_01_8"/>
+										  		<LinearLayout
+										  			a:layout_width="8dp"
+										  			a:layout_height="8dp"
+										  			a:background="textbox_01_9"/>
+									  		</LinearLayout>   
+								  		</LinearLayout>
+								  		
+								  		<LinearLayout 
+											a:orientation="horizontal"	
+											a:gravity="center"
+											a:layout_width="wrap_content"
+										    a:layout_height="wrap_content"
+										    a:layout_marginTop="10dp"
+										    a:layout_marginLeft="3dp">
+										    
+										    <CheckBox
+										    	a:checkid="purchase_checkbox"
+										    	a:layout_width="27dp"
+										    	a:layout_height="25.5dp"
+										    	a:onImage="checkbox_n"
+										    	a:layout_marginLeft="7dp"/>
+										    
+										    <TextView
+												a:layout_marginLeft="5dp"
+												a:textColor="#999999" 
+												a:text="동의합니다."
+												a:text_eng="I agree."
+												a:textSize="21px"/>
+										</LinearLayout>
+		    						</LinearLayout>
+		    						
+		    						<TextView a:layout_width="fill_parent" 
+						  					  a:layout_height="wrap_content" 
+						 					  a:layout_marginTop="12dp"
+						  					  a:layout_marginLeft="12dp"
+						  					  a:textSize="20pt"
+						   					  a:textColor="#999999" 
+					   	  					  a:text="* 결제하신 금액은 휴대폰 요금고지서에 합산 청구 됩니다."
+					   	  					  a:text_eng="* The amount of your mobile phone bill payments are charged to the sum."/>
+		    						<!-- <TextView  
+									     	a:layout_width="fill_parent" 
+											a:layout_height="wrap_content"
+											a:layout_marginTop="13dp"
+										    a:layout_marginLeft="14dp"
+											a:textSize="20pt" 
+											a:textColor="#999999" 
+											a:infotext=""/> 
+									<TextView a:layout_width="fill_parent" 
+						  					  a:layout_height="wrap_content" 
+						 					  a:layout_marginTop="12dp"
+						  					  a:layout_marginLeft="12dp"
+						  					  a:textSize="20pt"
+						   					  a:textColor="#999999" 
+					   	  					  a:loctbtntext=""/>
+		   	  					     <LinearLayout   
+											a:layout_marginTop="12dp"
+						  					a:layout_marginLeft="12dp"
+						  					a:layout_marginBottom="12dp"
+											a:layout_width="fill_parent"
+											a:layout_height="wrap_content"
+											a:gravity="center">
+											<Button 
+											    a:layout_width="98dp" 
+						    					a:layout_height="33dp" 
+											    a:gravity="center"
+										    	a:offImage="btn_locking_nor" 
+										    	a:onImage="btn_locking_sel"/>
+										</LinearLayout> -->
+		    					
+		    					
+		    					</LinearLayout>
+								</ScrollView>
+							</LinearLayout>
+		    					
+		    					
+		    						<LinearLayout a:layout_width="434dp" 
+		    									  a:layout_height="63dp" 
+		    									  a:layout_marginLeft="3dp"
+		    									  a:orientation="vertical">
+				    						
+											<LinearLayout	a:orientation="horizontal"
+								    						a:layout_width="fill_parent"
+								    						a:layout_height="wrap_content"
+								    						a:layout_marginTop="7dp"
+								    						a:gravity="center"
+								    						a:layout_marginLeft="3dp">
+								    				<Button  	a:layout_width="131dp" 
+																a:layout_height="41dp"
+																a:offImage_eng="btn_buy_nor_h_e" 
+			    												a:onImage_eng="btn_buy_sel_h_e"
+													    		a:offImage="btn_buy_nor_h" 
+												    			a:onImage="btn_buy_sel_h"/> 
+									     			<Button 	a:layout_marginLeft="2dp"
+													    		a:layout_width="131dp" 
+													    		a:layout_height="41dp"
+													    		a:offImage_eng="btn_cancel_nor_h_e" 
+																a:onImage_eng="btn_cancel_sel_h_e"
+													    		a:offImage="btn_cancel_nor_h" 
+													   			a:onImage="btn_cancel_sel_h"/> 
+											</LinearLayout>		
+						     				<TextView  	a:id 	= "Version"
+						     							a:layout_marginLeft="10dp"
+					    						     	a:layout_width="fill_parent" 
+					     								a:layout_height="wrap_content" 
+					     								a:textSize="12pt"
+					     								a:textColor="#999999" 
+													/>
+							</LinearLayout>	   	  					  
+					  
+			    	  </LinearLayout>
+		</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="ANE Test Build Scripts" default="build.debug">
+	
+	<property file="build.config"/>
+	<target name="build.debug-eng" depends="debug-compile,android-package-debug-eng"
+				description="Build and package the app in debug mode."/>
+	<target name="build.debug" depends="debug-compile,android-package-debug"
+		description="Build and package the app in debug mode."/>
+	<target name="build.release" depends="debug-compile,android-package-release"
+				description="Build and package the app in release mode."/>
+	<target name="debug-compile" description="Build a debug version of the application swf">
+		<mkdir dir="../bin"/>
+		<exec executable="${sdk.home}/bin/amxmlc.bat" failonerror="true" dir="../bin">
+			<arg line='-source-path ../src'/>
+			<arg line='-default-size=320,480'/>
+			<arg line='-default-background-color 0x000000'/>
+			<arg line='-default-frame-rate 30'/>
+			<arg line='-debug=true'/>
+			<arg line='-optimize=true'/>
+			<arg line='-swf-version=13'/>
+			<arg line='-external-library-path+="../../bin/libTStoreIAPAndroidLib.swc"'/>
+			<arg line='-output TStoreIAP.swf'/>
+			<arg line='../src/TStoreIAP.as'/>
+		</exec>
+	</target>
+	
+	<target name="android-package-debug-eng" description="Create the debug application .apk package">
+		<copy file="./TStoreIAP-app.xml" todir="../bin" overwrite="true"/>
+		<copy todir="../bin/icons">
+		    <fileset dir="./icons"/>
+		</copy>
+		<exec executable="${sdk.home}/bin/adt.bat" failonerror="true" dir="../bin">
+			<arg value="-package"/>
+			<arg value="-target"/>
+			<arg value="apk"/>
+			<arg value="-storetype"/>
+			<arg value="pkcs12"/>
+			<arg value="-keystore"/>
+			<arg value="${android.keystore.file}"/>
+			<arg value="-storepass"/>
+			<arg value="${android.keystore.password}"/>
+			<arg value="TStoreIAP-debug-eng.apk"/>
+			<arg value="TStoreIAP-app.xml"/>
+			<arg value="TStoreIAP.swf"/>
+			<arg value="-C"/>
+			<arg value="../bin"/>
+			<arg value="icons"/>
+			<arg value="-C"/>
+			<arg value="../bin/debug-eng"/>
+			<arg value="res"/>
+			<arg value="-C"/>
+			<arg value="../bin/debug-eng"/>
+			<arg value="xml"/>
+			<arg value="-C"/>
+			<arg value="../bin/debug-eng"/>
+			<arg value="xml_kt_lg"/>
+			<arg line="-extdir ../../bin/debug-eng"/>
+		</exec>
+	</target>
+	<target name="android-package-debug" description="Create the debug application .apk package">
+			<copy file="./TStoreIAP-app.xml" todir="../bin" overwrite="true"/>
+			<copy todir="../bin/icons">
+			    <fileset dir="./icons"/>
+			</copy>
+			<exec executable="${sdk.home}/bin/adt.bat" failonerror="true" dir="../bin">
+				<arg value="-package"/>
+				<arg value="-target"/>
+				<arg value="apk"/>
+				<arg value="-storetype"/>
+				<arg value="pkcs12"/>
+				<arg value="-keystore"/>
+				<arg value="${android.keystore.file}"/>
+				<arg value="-storepass"/>
+				<arg value="${android.keystore.password}"/>
+				<arg value="TStoreIAP-debug.apk"/>
+				<arg value="TStoreIAP-app.xml"/>
+				<arg value="TStoreIAP.swf"/>
+				<arg value="-C"/>
+				<arg value="../bin"/>
+				<arg value="icons"/>
+				<arg value="-C"/>
+				<arg value="../bin/debug"/>
+				<arg value="res"/>
+				<arg value="-C"/>
+				<arg value="../bin/debug"/>
+				<arg value="xml"/>
+				<arg value="-C"/>
+				<arg value="../bin/debug"/>
+				<arg value="xml_kt_lg"/>
+				<arg line="-extdir ../../bin/debug"/>
+			</exec>
+	</target>
+	<target name="android-package-release" description="Create the debug application .apk package">
+			<copy file="./TStoreIAP-app.xml" todir="../bin" overwrite="true"/>
+			<copy todir="../bin/icons">
+			    <fileset dir="./icons"/>
+			</copy>
+			<exec executable="${sdk.home}/bin/adt.bat" failonerror="true" dir="../bin">
+				<arg value="-package"/>
+				<arg value="-target"/>
+				<arg value="apk"/>
+				<arg value="-storetype"/>
+				<arg value="pkcs12"/>
+				<arg value="-keystore"/>
+				<arg value="${android.keystore.file}"/>
+				<arg value="-storepass"/>
+				<arg value="${android.keystore.password}"/>
+				<arg value="TStoreIAP-release.apk"/>
+				<arg value="TStoreIAP-app.xml"/>
+				<arg value="TStoreIAP.swf"/>
+				<arg value="-C"/>
+				<arg value="../bin"/>
+				<arg value="icons"/>
+				<arg value="-C"/>
+				<arg value="../bin/release"/>
+				<arg value="res"/>
+				<arg value="-C"/>
+				<arg value="../bin/release"/>
+				<arg value="xml"/>
+				<arg value="-C"/>
+				<arg value="../bin/release"/>
+				<arg value="xml_kt_lg"/>
+				<arg line="-extdir ../../bin/release"/>
+			</exec>
+	</target>	
+</project>

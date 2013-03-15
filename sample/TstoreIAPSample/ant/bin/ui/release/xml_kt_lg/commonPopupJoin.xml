@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:a="http://schemas.android.com/apk/res/android"
+  a:layout_width="fill_parent"
+  a:layout_height="fill_parent"
+  a:gravity="center">
+  
+  
+  <LinearLayout
+  	a:orientation="vertical"
+  	a:layout_width="fill_parent"
+	a:layout_height="fill_parent"
+	a:background="popup_bg_all.9"
+	a:gravity="center"
+	a:layout_marginLeft="15dp">
+ 
+	  <LinearLayout
+	  	a:orientation="vertical"
+	  	a:layout_width="wrap_content"
+		a:layout_height="wrap_content">
+		
+	  <LinearLayout
+	  	a:orientation="vertical"
+	  	a:layout_marginLeft="6dp"	   					
+		a:gravity="center"
+		a:layout_width="fill_parent"
+		a:layout_height="fill_parent"
+		a:paddingBottom="10dp"
+		>
+		<ImageView
+			a:src="pop_title"
+			a:src_eng="pop_title_e"
+			a:layout_width="wrap_content"
+			a:layout_height="wrap_content"
+			a:gravity="center"/>
+		</LinearLayout>	
+			
+		<LinearLayout
+	  	a:orientation="vertical"
+	  	a:layout_width="wrap_content"
+		a:layout_height="wrap_content"
+		>
+		
+		<ScrollView
+				a:layout_width="fill_parent"
+				a:layout_height="320dp">	
+				<LinearLayout
+					a:orientation="vertical"
+					a:layout_width="fill_parent"
+					a:layout_height="fill_parent"
+					>
+					<!-- 1번째 약관 시작!! -->
+					<LinearLayout 
+						a:orientation="horizontal"
+						a:layout_width="fill_parent"
+					    a:layout_height="wrap_content">
+						<LinearLayout 
+							a:paddingTop="15dp"
+							a:layout_width="wrap_content"
+						    a:layout_height="wrap_content"
+						    a:layout_weight="1"
+						    a:gravity="left"
+						    >
+						    <!-- 이용약관 이미지버튼-->
+							<ImageView
+								a:src="icon_bullet"
+								a:layout_width="wrap_content"
+								a:layout_height="wrap_content"
+									/>
+						</LinearLayout>
+						<LinearLayout 
+					   		a:paddingTop="15dp"
+					   		a:layout_width="wrap_content"
+						    a:layout_height="wrap_content"
+						    a:gravity="right"
+						    a:layout_weight="1">
+						   	<!-- 약관전체보기 버튼 -->
+							<Button
+								a:layout_width="90dp"
+								a:layout_height="25dp"
+								/>
+						</LinearLayout>
+					</LinearLayout>
+					<!-- 이용약관 내용 이미지 -->		    
+			  		<LinearLayout 
+						a:orientation="horizontal"
+						a:layout_width="wrap_content"
+					    a:layout_height="wrap_content">		    
+				  		<ImageView
+				  			a:src="pop_btn_sel_ok"
+				  			a:src_eng="pop_btn_sel_ok_e"
+				  			a:layout_width="wrap_content"
+				  			a:layout_height="wrap_content"
+				  			/>
+			  		</LinearLayout>
+			  		
+					
+					<!-- 리니어 레이아웃 안에 체크박스랑 텍스트뷰 horizontal로 만들기 -->
+					<LinearLayout 
+						a:orientation="horizontal"	
+						a:gravity="center"
+						a:layout_width="wrap_content"
+					    a:layout_height="wrap_content">
+					    
+					    <CheckBox
+					    	a:checkid="info_checkbox1"
+					    	a:layout_width="58dp"
+					    	a:layout_height="30dp"
+					    	a:onImage="btn_check_no_nor"/>
+					    
+					    <TextView
+					    	a:id="JoinAgree"
+							a:layout_width="fill_parent"
+							a:layout_height="wrap_content"
+							a:layout_marginLeft="10dp"
+							a:layout_marginRight="10dp"
+							a:textColor="#CFCFCF" 
+							a:text="위의 이용약관에 동의합니다."
+							a:text_eng="I accept the above terms and conditions."/>
+					</LinearLayout>
+					<!-- 1번째 약관 끝-->
+					<!-- 2번째 약관 시작!! -->
+					<LinearLayout 
+						a:orientation="horizontal"
+						a:layout_width="fill_parent"
+					    a:layout_height="wrap_content">
+						<LinearLayout 
+							a:paddingTop="15dp"
+							a:layout_width="wrap_content"
+						    a:layout_height="wrap_content"
+						    a:layout_weight="1"
+						    a:gravity="left"
+						    >
+						    <!-- 이용약관 이미지버튼-->
+							<ImageView
+								a:src="icon_bullet"
+								a:layout_width="wrap_content"
+								a:layout_height="wrap_content"
+									/>
+						</LinearLayout>
+						<LinearLayout 
+					   		a:paddingTop="15dp"
+					   		a:layout_width="wrap_content"
+						    a:layout_height="wrap_content"
+						    a:gravity="right"
+						    a:layout_weight="1">
+						   	<!-- 약관전체보기 버튼 -->
+							<Button
+								a:layout_width="90dp"
+								a:layout_height="25dp"
+								/>
+						</LinearLayout>
+					</LinearLayout>
+					<!-- 이용약관 내용 이미지 -->		    
+			  		<LinearLayout 
+						a:orientation="horizontal"
+						a:layout_width="wrap_content"
+					    a:layout_height="wrap_content">		    
+				  		<ImageView
+				  			a:src="pop_btn_sel_ok"
+				  			a:src_eng="pop_btn_sel_ok_e"
+				  			a:layout_width="wrap_content"
+				  			a:layout_height="wrap_content"
+				  			/>
+			  		</LinearLayout>
+			  		
+					
+					<!-- 리니어 레이아웃 안에 체크박스랑 텍스트뷰 horizontal로 만들기 -->
+					<LinearLayout 
+						a:orientation="horizontal"		
+						a:gravity="center"
+						a:layout_width="wrap_content"
+					    a:layout_height="wrap_content">
+					    
+					    <CheckBox
+					    	a:checkid="info_checkbox2"
+					    	a:layout_width="58dp"
+					    	a:layout_height="30dp"
+					    	a:onImage="btn_check_no_nor"/>
+					    
+					    <TextView
+					    	a:id="JoinAgree"
+							a:layout_width="fill_parent"
+							a:layout_height="wrap_content"
+							a:layout_marginLeft="10dp"
+							a:layout_marginRight="10dp"
+							a:textColor="#CFCFCF" 
+							a:text="위의 이용약관에 동의합니다."
+							a:text_eng="I accept the above terms and conditions."/>
+					</LinearLayout>
+					<!-- 2번째 약관 끝-->
+					<!-- 3번째 약관 시작!! -->
+					<LinearLayout 
+						a:orientation="horizontal"
+						a:layout_width="fill_parent"
+					    a:layout_height="wrap_content">
+						<LinearLayout 
+							a:paddingTop="15dp"
+							a:layout_width="wrap_content"
+						    a:layout_height="wrap_content"
+						    a:layout_weight="1"
+						    a:gravity="left"
+						    >
+						    <!-- 이용약관 이미지버튼-->
+							<ImageView
+								a:src="icon_bullet"
+								a:layout_width="wrap_content"
+								a:layout_height="wrap_content"
+									/>
+						</LinearLayout>
+						<LinearLayout 
+							a:paddingTop="15dp"
+					   		a:layout_width="wrap_content"
+						    a:layout_height="wrap_content"
+						    a:gravity="right"
+						    a:layout_weight="1">
+						   	<!-- 약관전체보기 버튼 -->
+							<Button
+								a:layout_width="90dp"
+								a:layout_height="25dp"
+								/>
+						</LinearLayout>
+					</LinearLayout>
+					<!-- 이용약관 내용 이미지 -->		    
+			  		<LinearLayout 
+						a:orientation="horizontal"
+						a:layout_width="wrap_content"
+					    a:layout_height="wrap_content">		    
+				  		<ImageView
+				  			a:src="pop_btn_sel_ok"
+				  			a:src_eng="pop_btn_sel_ok_e"
+				  			a:layout_width="wrap_content"
+				  			a:layout_height="wrap_content"
+				  			/>
+			  		</LinearLayout>
+			  		
+					
+					<!-- 리니어 레이아웃 안에 체크박스랑 텍스트뷰 horizontal로 만들기 -->
+					<LinearLayout 
+						a:orientation="horizontal"	
+						a:gravity="center"
+						a:layout_width="wrap_content"
+					    a:layout_height="wrap_content">
+					    
+					    <CheckBox
+					    	a:checkid="info_checkbox3"
+					    	a:layout_width="58dp"
+					    	a:layout_height="30dp"
+					    	a:onImage="btn_check_no_nor"/>
+					    
+					    <TextView
+					    	a:id="JoinAgree"
+							a:layout_width="fill_parent"
+							a:layout_height="wrap_content"
+							a:layout_marginLeft="10dp"
+							a:layout_marginRight="10dp"
+							a:textColor="#CFCFCF" 
+							a:text="위의 개인보호 보호정책에 동의합니다."
+							a:text_eng="Agree to the Privacy Policy."/>
+					</LinearLayout>
+					<!-- 3번째 약관 끝-->
+				</LinearLayout>
+		</ScrollView>
+		
+			
+		<LinearLayout 
+			a:orientation="horizontal"   					
+			a:gravity="center"
+			a:layout_width="wrap_content"
+		    a:layout_height="wrap_content"
+		    a:paddingTop="15dp"
+		    a:paddingBottom="30dp">
+				<Button		
+					a:layout_width="120dp" 
+					a:layout_height="41dp"
+					a:gravity="center"
+					a:offImage_eng="btn_con_nor_e"
+					a:onImage_eng="btn_con_sel_e"
+					a:offImage="btn_con_nor" 
+					a:onImage="btn_con_sel"		/>
+				<Button		
+					a:layout_width="120dp" 
+					a:layout_height="41dp"
+					a:gravity="center"
+					a:offImage_eng="btn_cancel_nor_h_e" 
+					a:onImage_eng="btn_cancel_sel_h_e"
+					a:offImage="btn_cancel_nor_h" 
+					a:onImage="btn_cancel_sel_h"		/> 
+		</LinearLayout>
+		</LinearLayout>
+			
+			
+	</LinearLayout>
+
+</LinearLayout>
+
+
+</LinearLayout>

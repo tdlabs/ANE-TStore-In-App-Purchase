@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:a="http://schemas.android.com/apk/res/android"
+  a:layout_width="fill_parent"
+  a:layout_height="fill_parent"
+  a:gravity="center">
+  
+  <LinearLayout	
+  	a:background="popup_bg_all.9"
+	a:layout_marginLeft="6dp"
+	a:orientation="vertical"
+	a:gravity="center"
+	a:layout_width="310dp"
+	a:layout_height="wrap_content">
+    <TextView
+    	a:id="commonMessage"
+    	a:gravity="center"
+    	a:layout_width="250dp"
+    	a:layout_height="wrap_content"
+    	a:layout_marginTop = "25dp"
+    	a:textSize="24pt"
+		a:textColor="#CFCFCF"/>
+	<LinearLayout	
+		a:id="otpLine"
+		a:background="bg_line"
+		a:layout_width="275dp" 
+		a:layout_height="wrap_content"
+		a:layout_marginBottom = "25dp"
+		a:layout_marginRight = "5dp"/>
+	<LinearLayout	
+		a:id="otpPopup"
+		a:layout_width="275dp" 
+		a:layout_height="wrap_content"
+		a:layout_marginBottom = "9dp"
+		a:layout_marginRight = "5dp"
+		a:orientation="horizontal">
+		<CheckBox
+	    	a:checkid="otp_checkbox"
+	    	a:layout_width="27dp"
+	    	a:layout_height="25.5dp"
+	    	a:xlayout_width="34dp"
+			a:xlayout_height="32dp"
+	    	a:onImage="checkbox_n"/>
+    	<TextView  	
+			a:layout_width="240dp" 
+			a:layout_height="wrap_content"
+			a:layout_marginLeft="5dp"
+			a:layout_marginBottom = "10dp"
+			a:otptext=""
+			a:textSize="21pt"
+			a:textColor="#CFCFCF"/>
+	</LinearLayout>
+	<Button		
+		a:layout_width="264dp" 
+		a:layout_height="41dp"
+		a:layout_marginBottom = "35dp"
+		a:gravity="center"
+		a:offImage_eng="pop_btn_nor_ok_e" 
+		a:onImage_eng="pop_btn_sel_ok_e"
+		a:offImage="pop_btn_nor_ok" 
+		a:onImage="pop_btn_sel_ok"/>		
+  </LinearLayout>	
+  		
+</LinearLayout>

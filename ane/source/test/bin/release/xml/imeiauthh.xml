@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:a="http://schemas.android.com/apk/res/android"
+  a:layout_width="fill_parent"
+  a:layout_height="fill_parent"
+  a:gravity="center"
+  >
+  
+  <LinearLayout
+  	a:orientation="vertical"
+  	a:layout_width="496dp"
+	a:layout_height="310dp"
+	a:background="popup_bg_all.9"
+	a:gravity="center">
+		<LinearLayout
+		  	a:layout_width="fill_parent"
+			a:layout_height="wrap_content"
+			a:gravity="center">
+			<TextView
+				a:id="name"
+				a:nortext="이용안내"
+				a:nortext_eng="Guidance by"
+				a:layout_width="fill_parent"
+				a:layout_height="wrap_content"
+				a:textColor="#ffffff"
+				a:shadowColor="#000000"
+				a:textSize="30px"
+				a:gravity="center"/>
+		</LinearLayout>
+		<LinearLayout 
+			a:orientation="horizontal"
+			a:layout_width="fill_parent"
+		    a:layout_height="wrap_content"
+		    a:layout_marginLeft="10dp">
+			<LinearLayout 
+				a:orientation="horizontal"
+				a:layout_width="wrap_content"
+			    a:layout_height="wrap_content"
+			    a:layout_weight="1"
+			    a:gravity="left">
+			    <LinearLayout
+			    	a:layout_width="wrap_content"
+			    	a:layout_height="wrap_content"
+			    	a:layout_marginLeft="14dp">
+			    <!-- 이용약관 이미지버튼-->
+					<ImageView
+						a:src="icon_title_01"
+						a:layout_width="2dp"
+						a:layout_height="21dp"/>
+				</LinearLayout>
+				<LinearLayout
+			    	a:layout_width="wrap_content"
+			    	a:layout_height="wrap_content"
+			    	a:paddingleft="6dp">
+					<TextView
+					a:id="commonJoinFormName"
+					a:layout_width="wrap_content"
+					a:layout_height="wrap_content"
+					a:nametext=""/>
+				</LinearLayout>
+			</LinearLayout>
+		</LinearLayout>
+			
+  		
+	<!-- 이용약관 내용 이미지 -->
+		<LinearLayout 
+				a:orientation="vertical"
+				a:layout_width="415dp"
+			    a:layout_height="81dp"
+			    a:paddingTop="3dp"
+			    a:layout_marginRight="8dp">
+			    
+			    <!-- text bg 분할한 것 넣기 -->
+		  		<LinearLayout
+		  			a:orientation="horizontal"
+		  			a:layout_width="415dp"
+		  			a:layout_height="8dp">
+		  			<LinearLayout
+			  			a:layout_width="8dp"
+			  			a:layout_height="8dp"
+			  			a:background="textbox_01_1"/>
+		  			<LinearLayout
+			  			a:layout_width="399dp"
+			  			a:layout_height="8dp"
+			  			a:background="textbox_01_2"/>
+			  		<LinearLayout
+			  			a:layout_width="8dp"
+			  			a:layout_height="8dp"
+			  			a:background="textbox_01_3"/>
+		  		</LinearLayout>
+		  		
+		  		<LinearLayout
+		  			a:orientation="horizontal"
+		  			a:layout_width="415dp"
+		  			a:layout_height="58dp">
+		  			<LinearLayout
+			  			a:layout_width="8dp"
+			  			a:layout_height="58dp"
+			  			a:background="textbox_01_4"/>
+		  			<ScrollView
+						a:layout_width="wrap_content"
+						a:layout_height="58dp"
+						a:orientation="vertical">
+					  		<TextView
+								a:id="commonJoinFormMessage"
+								a:layout_width="399dp"
+								a:layout_height="wrap_content"
+								a:centertext=""
+								a:textSize="23px"
+								a:textColor="#999999"/>
+					</ScrollView>
+		  		<LinearLayout
+		  			a:layout_width="8dp"
+		  			a:layout_height="58dp"
+		  			a:background="textbox_01_6"/>
+	  		</LinearLayout>	 
+	  		
+	  		<LinearLayout
+	  			a:orientation="horizontal"
+	  			a:layout_width="415dp"
+	  			a:layout_height="8dp">
+	  			<LinearLayout
+		  			a:layout_width="8dp"
+		  			a:layout_height="8dp"
+		  			a:background="textbox_01_7"/>
+	  			<LinearLayout
+		  			a:layout_width="399dp"
+		  			a:layout_height="8dp"
+		  			a:background="textbox_01_8"/>
+		  		<LinearLayout
+		  			a:layout_width="8dp"
+		  			a:layout_height="8dp"
+		  			a:background="textbox_01_9"/>
+	  		</LinearLayout>   
+  		</LinearLayout>
+  		<TextView
+				a:layout_marginLeft="30dp"
+				a:layout_marginRight="24dp"
+				a:textColor="#999999" 
+				a:agreetext="위 내용에 대해 동의하시면 이후에는 해당 안내 없이 지속적으로 서비스를 이용하실 수 있습니다."
+				a:agreetext_eng="After you agree on the above information without appropriate guidance services are available continuously."
+				a:textSize="21px"/>
+  		
+	<LinearLayout 
+			a:orientation="horizontal"
+			a:layout_width="fill_parent"
+		    a:layout_height="wrap_content"
+		    a:layout_marginTop="6dp"
+		    a:layout_marginLeft="14dp"
+		    a:gravity="left">
+	  		<CheckBox
+		    	a:checkid="imei_auth_checkbox"
+		    	a:layout_width="27dp"
+		    	a:layout_height="25.5dp"
+		    	a:xlayout_width="34dp"
+				a:xlayout_height="31dp"
+		    	a:onImage="checkbox_n"
+		    	a:layout_marginLeft="12dp"/>
+	    	<TextView
+		    	a:id="JoinAgree"
+				a:layout_marginLeft="10dp"
+				a:layout_marginRight="10dp"
+				a:textColor="#999999" 
+				a:agreetext="동의합니다."
+				a:agreetext_eng="I agree."
+				a:textSize="21px"/>
+		</LinearLayout>
+		
+			
+	<LinearLayout 
+    	a:gravity="center"
+		a:layout_width="fill_parent"
+	    a:layout_height="wrap_content"
+	    a:layout_marginTop="8dp">	
+		<Button		
+			a:layout_width="120dp" 
+			a:layout_height="41dp"
+			a:gravity="center"
+			a:offImage_eng="bt_confirm_dim_e" 
+			a:onImage_eng="bt_confirm_dim_e"
+			a:offImage="bt_confirm_dim" 
+			a:onImage="bt_confirm_dim"		/>
+		<Button		
+			a:layout_width="120dp" 
+			a:layout_height="41dp"
+			a:layout_marginLeft="6dp"
+			a:gravity="center"
+			a:offImage_eng="btn_cancel_nor_h_e" 
+			a:onImage_eng="btn_cancel_sel_h_e"
+			a:offImage="btn_cancel_nor_h" 
+			a:onImage="btn_cancel_sel_h"/>
+	</LinearLayout>
+	</LinearLayout>
+</LinearLayout>

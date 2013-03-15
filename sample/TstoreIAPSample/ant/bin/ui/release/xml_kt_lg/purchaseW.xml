@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:a="http://schemas.android.com/apk/res/android"
+    a:orientation="vertical"
+    a:layout_width="fill_parent"
+    a:layout_height="fill_parent"
+    a:gravity="center">
+	<LinearLayout a:orientation="vertical"
+	    		  a:layout_width="300dp"
+	    		  a:layout_height="325dp"
+	    		  a:background="popup_bg_all.9"
+	    		  a:layout_marginTop="20dp"
+	    		  a:layout_marginLeft="5dp">
+   	    <ImageView a:background="pop_title"
+   	    			a:background_eng="pop_title_e"
+			 	   a:layout_gravity="center"
+				   a:layout_width="72dp"
+				   a:layout_height="20dp"
+				   a:layout_marginTop="15dp"/>
+		
+		<ScrollView a:layout_width="275dp"
+				    a:layout_height="200dp"
+				    a:layout_gravity="center">
+		
+			<LinearLayout a:orientation="vertical"
+						a:layout_width="270dp"
+				    	a:layout_height="wrap_content"
+				    	a:layout_gravity="center">
+			
+				<LinearLayout a:orientation="vertical"
+							a:background="info_table_02"
+							a:layout_width="260dp"
+					    	a:layout_height="105dp"	
+					    	a:layout_marginTop="10dp"
+					    	a:layout_marginRight="5dp"
+					    	a:layout_gravity="center">
+					    	<LinearLayout   a:orientation="vertical"
+											a:layout_width="fill_parent"
+									    	a:layout_height="105dp"	
+									    	a:layout_marginLeft="104dp"    	>
+						    	<!--  정보시작 Start -->
+						    	  	<TextView  	a:id = "ItemName"
+						    	  				a:layout_width="fill_parent" 
+												a:layout_height="0dp"
+												a:textSize="22pt" 
+												a:layout_weight="1"
+												a:textColor="#CFCFCF"
+												/>
+									<TextView  	a:id = "ItemUseDate"
+												a:layout_width="fill_parent" 
+												a:layout_height="0dp"
+												a:textSize="20pt" 
+												a:layout_weight="1"
+												a:textColor="#999999" 
+		   											/>  
+		   								<TextView  	a:id = "ItemPrice"
+		   											a:layout_width="fill_parent" 
+													a:layout_height="0dp"
+		   											a:textSize="22pt" 
+		   											a:layout_weight="1"
+		   											a:textColor="#CFCFCF" 
+		   											/>
+						    	<!--  정보시작 End -->
+					    	</LinearLayout>
+			   </LinearLayout> 
+					
+				<LinearLayout a:orientation="vertical"
+						  a:layout_width="fill_parent"
+		    			  a:layout_height="wrap_content">
+			    	
+		     		<TextView a:layout_width="fill_parent" 
+							  a:layout_height="wrap_content" 
+							  a:layout_marginTop="8dp"
+							  a:layout_marginLeft="10dp"
+							  a:textSize="20pt"
+							  a:textColor="#999999" 
+						   	  a:text="* 결제하신 금액은 휴대폰 요금고지서에\n합산 청구 됩니다."
+						   	  a:text_eng="* The amount of your mobile phone bill\npayments are charged to the sum."/>
+				   <!-- <TextView  
+					     	  a:layout_width="fill_parent" 
+							  a:layout_height="wrap_content"
+							  a:layout_marginLeft="10dp"
+							  a:layout_marginRight="10dp"
+							  a:textSize="20pt" 
+							  a:textColor="#999999" 
+							  a:infotext=""/>
+							  
+					 <TextView  
+						     	a:layout_width="fill_parent" 
+								a:layout_height="wrap_content"
+								a:layout_marginTop="13dp"
+								a:layout_marginLeft="10dp"
+								a:textSize="20pt" 
+								a:textColor="#999999" 
+								a:loctbtntext=""/>
+					<LinearLayout   
+						a:layout_marginTop="10dp"
+						a:layout_width="fill_parent"
+						a:layout_height="wrap_content"
+						a:gravity="center">
+						<Button 
+						    a:layout_width="98dp" 
+						    a:layout_height="33dp" 
+						    a:gravity="center"
+					    	a:offImage="btn_locking_nor" 
+					    	a:onImage="btn_locking_sel"/>
+					</LinearLayout>	 -->	
+				</LinearLayout>
+			
+			</LinearLayout>
+		
+		</ScrollView>
+		
+		
+		
+		
+		
+		<LinearLayout a:orientation="horizontal"
+			   			  a:layout_marginTop="7dp"
+						  a:layout_width="fill_parent"
+						  a:layout_height="wrap_content"	>
+						<Button a:layout_marginLeft="10dp"
+								a:layout_width="131dp" 
+								a:layout_height="41dp" 
+								a:offImage_eng="btn_buy_nor_h_e" 
+			    				a:onImage_eng="btn_buy_sel_h_e"
+								a:offImage="btn_buy_nor_h" 
+								a:onImage="btn_buy_sel_h">
+						</Button>
+		     			<Button a:layout_marginLeft="6dp"
+								a:layout_width="131dp" 
+								a:layout_height="41dp" 
+								a:offImage_eng="btn_cancel_nor_h_e" 
+								a:onImage_eng="btn_cancel_sel_h_e"
+								a:offImage="btn_cancel_nor_h" 
+								a:onImage="btn_cancel_sel_h">
+						</Button>
+			</LinearLayout>
+			<TextView			a:id 	= "Version"
+    					     	a:layout_width="fill_parent" 
+     							a:layout_height="wrap_content" 
+     							a:layout_marginLeft="10dp"
+     							a:textSize="12pt"
+     							a:textColor="#999999" 
+			/>		
+	
+	</LinearLayout>
+</LinearLayout>

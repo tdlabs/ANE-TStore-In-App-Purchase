@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:a="http://schemas.a.com/apk/res/a"
+			    a:orientation="vertical"
+			    a:layout_width="fill_parent"
+			    a:layout_height="fill_parent"
+			    a:gravity="center">
+	    
+	    <LinearLayout a:orientation="vertical"
+		    		  a:layout_width="466dp"
+		    		  a:layout_height="180dp"
+	    			  a:background="popup_bg_all.9"
+	    			  a:layout_marginTop="20dp"
+		    		  a:layout_marginLeft="15dp">
+	    			  
+	    			  <ImageView a:background="pop_title"
+	    			  			a:background_eng="pop_title_e"
+						 		 a:layout_gravity="center"
+								 a:layout_width="72dp"
+								 a:layout_height="20dp"
+								 a:layout_marginTop="12dp"/>
+					  <LinearLayout a:orientation="horizontal"
+					 				a:layout_width="wrap_content"
+	    							a:layout_height="wrap_content">
+	    							
+	    			  				<LinearLayout a:background="info_table_02"
+												  a:layout_width="220dp"
+		    		  							  a:layout_height="105dp"
+		    		  							  a:layout_marginTop="10dp"
+		    									  a:layout_marginLeft="10dp"
+		    									  a:orientation="vertical">
+		    									  <LinearLayout   a:orientation="vertical"
+																  a:layout_width="120dp"
+										    					  a:layout_height="105dp"	
+																  a:layout_marginLeft="90dp">
+		    											<TextView a:layout_width="fill_parent"
+		    		 									  a:layout_height="wrap_content"
+		    		  	                                  a:layout_weight="1"
+		    		  	                                  a:textSize="22pt"
+		    		  									  a:id = "ItemName">
+		    											</TextView>
+		    											<TextView a:layout_width="fill_parent"
+		    		 									  a:layout_height="wrap_content"
+		    		 									  a:layout_weight="1"
+		    		  								   	  a:textSize="22pt"
+		    		  									  a:id = "ItemUseDate">
+		    											</TextView>
+		    											<TextView a:layout_width="fill_parent"
+		    		  									  a:layout_height="wrap_content"
+		    		  									  a:layout_weight="1"
+		    		  									  a:textSize="22pt"
+		    		  									  a:id = "ItemPrice"		    		  									 >
+		    											</TextView>
+		    									 </LinearLayout>
+		    						</LinearLayout>
+		    						
+		    						<LinearLayout a:layout_width="fill_parent" 
+		    									  a:layout_height="wrap_content" 
+		    									  a:orientation="vertical">
+				    						
+				    						 <LinearLayout
+											  	a:orientation="vertical"
+											  	a:layout_width="210dp"
+												a:layout_height="50dp"
+												a:layout_marginTop="5dp">
+											    <ScrollView
+															a:layout_width="fill_parent"
+															a:layout_height="fill_parent">	
+													<LinearLayout
+																	a:orientation="vertical"
+																	a:layout_width="fill_parent"
+																	a:layout_height="fill_parent"
+																	>	
+										    						
+							    						<TextView a:layout_width="fill_parent" 
+											  					  a:layout_height="wrap_content" 
+											 					  a:layout_marginTop="12dp"
+											  					  a:layout_marginLeft="10dp"
+											  					  a:textSize="20pt"
+											   					  a:textColor="#999999" 
+										   	  					  a:text="* 결제하신 금액은 휴대폰 요금\n고지서에 합산 청구 됩니다."
+										   	  					  a:text_eng="* The amount of your mobile phone bill\npayments are charged to the sum."/>
+										   	  		<!-- 	<TextView  
+														     	  a:layout_width="fill_parent" 
+																  a:layout_height="wrap_content"
+																  a:layout_marginTop="12dp"
+																  a:layout_marginLeft="10dp"
+																  a:layout_marginRight="10dp"
+																  a:textSize="20pt" 
+																  a:textColor="#999999" 
+																  a:loctbtntext=""/>
+														<LinearLayout   
+																	a:layout_marginTop="10dp"
+																	a:layout_width="fill_parent"
+																	a:layout_height="wrap_content"
+																	a:gravity="center">
+															<Button 
+															    a:layout_width="98dp" 
+						   										a:layout_height="33dp" 
+															    a:gravity="center"
+														    	a:offImage="btn_locking_nor" 
+														    	a:onImage="btn_locking_sel"/>
+														</LinearLayout>		 -->
+											
+													</LinearLayout>
+												</ScrollView>
+											</LinearLayout>
+											<LinearLayout	a:orientation="horizontal"
+								    						a:layout_width="wrap_content"
+								    						a:layout_height="wrap_content"
+								    						a:layout_marginTop="20dp"
+								    						a:gravity="center"
+								    						a:layout_marginLeft="3dp">
+								    				<Button  	a:layout_width="100dp" 
+																a:layout_height="42dp"
+																a:offImage_eng="btn_buy_nor_h_e" 
+			    												a:onImage_eng="btn_buy_sel_h_e"
+													    		a:offImage="btn_buy_nor_h" 
+												    			a:onImage="btn_buy_sel_h"/> 
+									     			<Button 	a:layout_marginLeft="2dp"
+													    		a:layout_width="100dp" 
+													    		a:layout_height="42dp"
+													    		a:offImage_eng="btn_cancel_nor_h_e" 
+																a:onImage_eng="btn_cancel_sel_h_e"
+													    		a:offImage="btn_cancel_nor_h" 
+													   			a:onImage="btn_cancel_sel_h"/> 
+											</LinearLayout>		
+											<LinearLayout
+														a:orientation="vertical"
+														a:layout_width="fill_parent"
+														a:layout_height="fill_parent">
+									     				<TextView  	a:id 	= "Version"
+									     							a:layout_marginLeft="10dp"
+								    						     	a:layout_width="fill_parent" 
+								     								a:layout_height="wrap_content" 
+								     								a:textSize="12pt"
+								     								a:textColor="#999999" 
+																/>
+											</LinearLayout>		
+							</LinearLayout>	   	  					  
+					  
+			    	  </LinearLayout>
+		</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Air Native Extension Build Scripts" default="debug-eng">
+	
+	<property file="build.config"/>
+	<target name="debug-eng" depends="android-debug-eng,swc,default,package-debug-eng" description="build by IAPLibD_Eng.jar"/>
+	<target name="debug" depends="android-debug,swc,default,package-debug" description="build by IAPLibD.jar"/>
+	<target name="release" depends="android-release,swc,default,package-release" description="build by IAPLibR.jar"/>
+	<target name="android-debug-eng" description="Build android Library">
+		<delete dir="../android/temp"/>
+		<mkdir dir="../android/temp/classes"/>
+		<javac srcdir="../android/src" debug="true" destdir="../android/temp/classes" includeantruntime="false">
+			<classpath>
+				<pathelement location="${android.sdk}/android.jar"/>
+				<pathelement location="../android/libs/FlashRuntimeExtensions.jar"/>
+				<pathelement location="../android/libs/IAPLibD_Eng.jar"/>
+			</classpath>
+		</javac>
+		<javac srcdir="../android/gen" debug="true" destdir="../android/temp/classes" includeantruntime="false">
+				<classpath>
+					<pathelement location="${android.sdk}/android.jar"/>
+					<pathelement location="../android/libs/FlashRuntimeExtensions.jar"/>
+					<pathelement location="../android/libs/IAPLibD_Eng.jar"/>
+				</classpath>
+		</javac>
+		<mkdir dir="../temp/android/"/>
+		
+		<copydir src="../android/res/" dest="../android/temp/classes/res"/>
+		<unzip src="../android/libs/IAPLibD_Eng.jar" dest="../android/temp/zip"/>
+		<copydir src="../android/temp/zip/com" dest="../android/temp/classes/com"/>
+		<!--
+		<copydir src="../android/temp/zip/xml" dest="../android/temp/classes/xml"/>
+		<copydir src="../android/temp/zip/xml_kt_lg" dest="../android/temp/classes/xml_kt_lg"/>
+		<copydir src="../android/temp/zip/res" dest="../android/temp/classes/res"/>
+		-->
+		<copy file="../android/AndroidManifest.xml" todir="../android/temp/classes" overwrite="true"/>
+		<jar basedir="../android/temp/classes" destfile="../temp/android/${name}.jar"/>
+		<delete dir="../android/temp"/>
+	</target>
+	<target name="android-debug" description="Build android Library">
+		<delete dir="../android/temp"/>
+		<mkdir dir="../android/temp/classes"/>
+		<javac srcdir="../android/src" debug="true" destdir="../android/temp/classes" includeantruntime="false">
+			<classpath>
+				<pathelement location="${android.sdk}/android.jar"/>
+				<pathelement location="../android/libs/FlashRuntimeExtensions.jar"/>
+				<pathelement location="../android/libs/IAPLibD.jar"/>
+			</classpath>
+		</javac>
+		<javac srcdir="../android/gen" debug="true" destdir="../android/temp/classes" includeantruntime="false">
+				<classpath>
+					<pathelement location="${android.sdk}/android.jar"/>
+					<pathelement location="../android/libs/FlashRuntimeExtensions.jar"/>
+					<pathelement location="../android/libs/IAPLibD.jar"/>
+				</classpath>
+		</javac>
+		<mkdir dir="../temp/android/"/>
+		
+		<copydir src="../android/res/" dest="../android/temp/classes/res"/>
+		<unzip src="../android/libs/IAPLibD.jar" dest="../android/temp/zip"/>
+		<copydir src="../android/temp/zip/com" dest="../android/temp/classes/com"/>
+		<!--
+		<copydir src="../android/temp/zip/xml" dest="../android/temp/classes/xml"/>
+		<copydir src="../android/temp/zip/xml_kt_lg" dest="../android/temp/classes/xml_kt_lg"/>
+		<copydir src="../android/temp/zip/res" dest="../android/temp/classes/res"/>
+		-->
+		<copy file="../android/AndroidManifest.xml" todir="../android/temp/classes" overwrite="true"/>
+		<jar basedir="../android/temp/classes" destfile="../temp/android/${name}.jar"/>
+		<delete dir="../android/temp"/>
+	</target>		
+	<target name="android-release" description="Build android Library">
+		<delete dir="../android/temp"/>
+		<mkdir dir="../android/temp/classes"/>
+		<javac srcdir="../android/src" debug="true" destdir="../android/temp/classes" includeantruntime="false">
+			<classpath>
+				<pathelement location="${android.sdk}/android.jar"/>
+				<pathelement location="../android/libs/FlashRuntimeExtensions.jar"/>
+				<pathelement location="../android/libs/IAPLibR.jar"/>
+			</classpath>
+		</javac>
+		<javac srcdir="../android/gen" debug="true" destdir="../android/temp/classes" includeantruntime="false">
+				<classpath>
+					<pathelement location="${android.sdk}/android.jar"/>
+					<pathelement location="../android/libs/FlashRuntimeExtensions.jar"/>
+					<pathelement location="../android/libs/IAPLibR.jar"/>
+				</classpath>
+		</javac>
+		<mkdir dir="../temp/android/"/>
+		
+		<copydir src="../android/res/" dest="../android/temp/classes/res"/>
+		<unzip src="../android/libs/IAPLibR.jar" dest="../android/temp/zip"/>
+		<copydir src="../android/temp/zip/com" dest="../android/temp/classes/com"/>
+		<!--
+		<copydir src="../android/temp/zip/xml" dest="../android/temp/classes/xml"/>
+		<copydir src="../android/temp/zip/xml_kt_lg" dest="../android/temp/classes/xml_kt_lg"/>
+		<copydir src="../android/temp/zip/res" dest="../android/temp/classes/res"/>
+		-->
+		<copy file="../android/AndroidManifest.xml" todir="../android/temp/classes" overwrite="true"/>
+		<jar basedir="../android/temp/classes" destfile="../temp/android/${name}.jar"/>
+		<delete dir="../android/temp"/>
+	</target>	
+	<target name="swc" description="Build swc library">
+		<mkdir dir="../temp/swc/content/"/>
+		
+		<fileset dir="../actionscript/src" casesensitive="yes" id="classfiles">
+			<include name="**/*.as"/>
+		</fileset>
+
+		<pathconvert property="classlist" refid="classfiles" pathsep=" " dirsep=".">
+			<regexpmapper from=".*src.(.*)\.as" to="\1"/>
+		</pathconvert>
+		
+		<exec executable="${sdk.home}/bin/compc.exe" failonerror="true">
+			<arg line='-source-path ../actionscript/src'/>
+			<arg line='-output ../temp/swc/${name}.swc'/>
+			<arg line='-swf-version=13'/>
+			<arg line='-external-library-path+="${sdk.home}/frameworks/libs/air/airglobal.swc"'/>
+			<arg line='-include-classes ${classlist}'/>
+		</exec>
+
+		<unzip src="../temp/swc/${name}.swc" dest="../temp/swc/content" overwrite="true"/>
+		<copy file="../temp/swc/content/library.swf" todir="../temp/android" overwrite="true"/>
+		<delete dir="../temp/swc/content/"/>
+	</target>
+	
+	<target name="default" description="Build default swc library">
+		<mkdir dir="../temp/default/"/>
+		
+		<fileset dir="../default/src" casesensitive="yes" id="classfiles2">
+			<include name="**/*.as"/>
+		</fileset>
+
+		<pathconvert property="classlist2" refid="classfiles2" pathsep=" " dirsep=".">
+			<regexpmapper from=".*src.(.*)\.as" to="\1"/>
+		</pathconvert>
+		
+		<exec executable="${sdk.home}/bin/compc${bin.ext}" failonerror="true">
+			<arg line='-source-path ../default/src'/>
+			<arg line='-output ../temp/default/${name}.swc'/>
+			<arg line='-swf-version=13'/>
+			<arg line='-external-library-path+="${sdk.home}/frameworks/libs/air/airglobal.swc"'/>
+			<arg line='-include-classes ${classlist2}'/>
+		</exec>
+
+		<unzip src="../temp/default/${name}.swc" dest="../temp/default/swc" overwrite="true"/>
+		<copy file="../temp/default/swc/library.swf" todir="../temp/default" overwrite="true"/>
+		<delete dir="../temp/default/swc"/>
+	</target>
+	
+	<target name="package-debug-eng" description="Create the extension package">
+		<exec executable="${sdk.home}/bin/adt.bat" failonerror="true" dir="../temp">
+			<arg value="-package"/>
+			<arg value="-storetype"/>
+			<arg value="pkcs12"/>
+			<arg value="-keystore"/>
+			<arg value="${keystore.file}"/>
+			<arg value="-storepass"/>
+			<arg value="${keystore.password}"/>
+			<arg value="-target"/>
+			<arg value="ane"/>
+			<arg value="${name}-debug-eng.ane"/>
+			<arg value="../build/extension.xml"/>
+			<arg line="-swc swc/${name}.swc"/>
+			<arg line="-platform Android-ARM -C android/ ."/>
+		</exec>
+		<mkdir dir="../bin/debug-eng"/>
+		<move file="../temp/${name}-debug-eng.ane" todir="../bin/debug-eng"/>
+		<move file="../temp/default/${name}.swc" todir="../bin/debug-eng"/>
+		<delete dir="../temp/"/>
+	</target>
+	<target name="package-debug" description="Create the extension package">
+			<exec executable="${sdk.home}/bin/adt.bat" failonerror="true" dir="../temp">
+				<arg value="-package"/>
+				<arg value="-storetype"/>
+				<arg value="pkcs12"/>
+				<arg value="-keystore"/>
+				<arg value="${keystore.file}"/>
+				<arg value="-storepass"/>
+				<arg value="${keystore.password}"/>
+				<arg value="-target"/>
+				<arg value="ane"/>
+				<arg value="${name}-debug.ane"/>
+				<arg value="../build/extension.xml"/>
+				<arg line="-swc swc/${name}.swc"/>
+				<arg line="-platform Android-ARM -C android/ ."/>
+			</exec>
+			<mkdir dir="../bin/debug"/>
+			<move file="../temp/${name}-debug.ane" todir="../bin/debug"/>
+			<move file="../temp/default/${name}.swc" todir="../bin/debug"/>
+			<delete dir="../temp/"/>
+		</target>
+		<target name="package-release" description="Create the extension package">
+				<exec executable="${sdk.home}/bin/adt.bat" failonerror="true" dir="../temp">
+				<arg value="-package"/>
+				<arg value="-storetype"/>
+				<arg value="pkcs12"/>
+				<arg value="-keystore"/>
+				<arg value="${keystore.file}"/>
+				<arg value="-storepass"/>
+				<arg value="${keystore.password}"/>
+				<arg value="-target"/>
+				<arg value="ane"/>
+				<arg value="${name}-release.ane"/>
+				<arg value="../build/extension.xml"/>
+				<arg line="-swc swc/${name}.swc"/>
+				<arg line="-platform Android-ARM -C android/ ."/>
+			</exec>
+			<mkdir dir="../bin/debug"/>
+			<move file="../temp/${name}-release.ane" todir="../bin/release"/>
+			<move file="../temp/default/${name}.swc" todir="../bin/release"/>
+			<delete dir="../temp/"/>
+		</target>
+</project>

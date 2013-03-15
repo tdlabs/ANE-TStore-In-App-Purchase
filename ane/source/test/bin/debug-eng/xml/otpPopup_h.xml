@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:a="http://schemas.android.com/apk/res/android"
+  a:layout_width="fill_parent"
+  a:layout_height="fill_parent"
+  a:gravity="center">
+  
+  <LinearLayout
+  	a:layout_width="486dp"
+  	a:layout_height="wrap_content"
+  	a:orientation="vertical"
+  	a:background="popup_bg_all.9"
+	a:gravity="center">
+	<TextView
+		a:layout_width="wrap_content" 
+		a:layout_height="wrap_content"
+		a:layout_marginTop = "40dp"
+		a:layout_marginBottom = "5dp"
+		a:text="T store 인증번호 "
+		a:text_eng="T store Certificate No. "
+		a:textColor="#ffffff"
+		a:shadowColor="#000000"
+		a:textSize="30px"/>
+	<TextView  	
+		a:layout_width="420dp" 
+		a:layout_height="wrap_content"
+		a:layout_marginBottom = "12dp"
+		a:text="안전한 결제를 위해 인증서비스를 제공하고 있습니다.\n아래 인증번호를 입력해주세요."
+		a:text_eng="Certification for secure payment services.\nPlease enter the following identification number."
+		a:gravity="center"
+		a:textSize="21pt"
+		a:textColor="#CFCFCF"		/>
+		
+	<LinearLayout
+		a:layout_width="420dp" 
+		a:layout_height="wrap_content"
+		a:orientation="horizontal">
+		<LinearLayout 
+			a:background="info_table_04.9"
+		    a:layout_width="200dp"
+			a:layout_height="37dp"
+			a:orientation="horizontal"
+			a:gravity="center"
+			a:layout_marginBottom ="9dp">
+			<TextView
+				a:gravity="center" 	
+				a:text="인증번호"
+				a:text_eng="Certificate No."
+				a:textSize="18pt"
+				a:textColor="#CFCFCF"		
+				a:layout_weight="1"/>
+			<TextView  
+			 	a:gravity="center"	
+				a:id="otpnumber_text"
+				a:otpnumbertext=""
+				a:textSize="22pt"
+				a:textColor="#FF7E19"		
+				a:layout_weight="7"
+				a:layout_marginRight ="9dp"/> 
+	    </LinearLayout>
+	    <LinearLayout 
+	    	a:background="input_box_nor2.9"
+		    a:layout_width="215dp"
+		    a:layout_height="33dp"
+		    a:gravity="center"
+		    a:layout_marginTop = "2dp"
+		    a:layout_marginLeft = "5dp">
+		  	<EditText	
+			  	a:layout_width="210dp"
+			  	a:layout_height="35dp"
+			  	a:layout_marginTop = "5dp"
+			  	a:id="otp_edit_text"
+				a:maxLength="4"
+				a:textSize="16pt"
+				a:textColor="#CFCFCF"/>
+		</LinearLayout>
+  	</LinearLayout>
+  	<LinearLayout 	
+  		a:background="textbox_.9"
+		a:orientation="vertical"
+		a:layout_width="420dp" 
+		a:layout_height="wrap_content"
+		a:layout_marginBottom = "15dp">
+		<TextView  	
+			a:id="otp_info_text"
+			a:layout_marginLeft = "5dp"
+			a:infotext="Tip!"
+			a:textSize="20pt"
+			a:textColor="#BF5B53"/>
+		<TextView  	
+			a:id="otp_info_text"
+			a:layout_marginLeft = "5dp"
+			a:infotext="T store 잠금설정 기능을 이용하시면 더욱 안전한 결제를 하실 수 있습니다. 잠금 설정을 하시겠습니까?"
+			a:infotext_eng="If T store using the lock setting function can be more secure payments. Would you like to set the lock?"
+			a:textSize="20pt"
+			a:textColor="#CFCFCF"/>				
+	</LinearLayout>	
+	<Button 
+	    a:layout_width="98dp" 
+	    a:layout_height="33dp" 
+	    a:layout_marginBottom = "53dp"
+	    a:offImage_eng="btn_locking_nor_e" 
+    	a:onImage_eng="btn_locking_sel_e"
+    	a:offImage="btn_locking_nor" 
+    	a:onImage="btn_locking_sel"/>
+  	
+  </LinearLayout>
+  
+</LinearLayout>

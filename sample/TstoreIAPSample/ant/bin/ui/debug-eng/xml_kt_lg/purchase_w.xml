@@ -1,0 +1,715 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:a="http://schemas.android.com/apk/res/android"
+    a:layout_width="fill_parent"
+    a:layout_height="fill_parent"
+    a:gravity="center" >
+    
+    <!-- 전체 레이아웃 -->
+    <LinearLayout  
+		a:background="popup_bg_all_2.9"
+		a:orientation="vertical"
+		a:layout_width="296dp"
+    	a:layout_height="434dp" >
+	    
+        <!-- 타이틀 -->	
+        <TextView
+            a:layout_width="fill_parent"
+            a:layout_height="47dp"
+            a:gravity="center"
+            a:text="상품결제"
+            a:text_eng="Product Payments"
+            a:textSize="30px"
+            a:textColor="#ffffff"/>
+         
+        <!-- 컨텐트 스크롤 -->
+        <ScrollView
+            a:layout_width="285dp"
+			a:layout_height="305dp">
+			
+			<!-- 컨텐트 뷰 -->
+	        <LinearLayout
+	            a:layout_width="fill_parent"
+				a:layout_height="fill_parent"
+				a:orientation="vertical">
+				
+	            <!-- 구매내역 뷰 -->
+	            <LinearLayout
+	                a:orientation="vertical"
+	                a:layout_marginLeft="14dp"
+	                a:layout_marginBottom="10dp"
+					a:layout_width="fill_parent"
+				    a:layout_height="wrap_content">
+				    <!-- 구매내역 뷰  타이틀-->
+				    <LinearLayout
+				        a:orientation="horizontal"
+				        a:layout_width="fill_parent"
+				        a:layout_height="wrap_content"
+				        a:layout_marginBottom="5dp">
+				        <ImageView
+							a:src="icon_title_01"
+							a:layout_width="2dp"
+							a:layout_height="21dp"/>
+				        <LinearLayout
+					    	a:layout_width="wrap_content"
+					    	a:layout_height="21dp"
+					    	a:layout_marginLeft="8dp">
+						    <TextView
+								a:text="구매내역"
+								a:text_eng="Product Details"
+								a:textSize="21pt"
+								a:textColor="#999999"/>
+					    </LinearLayout>
+				    </LinearLayout>
+				    
+				    <!-- 구매내역 뷰  테이블-->
+				    <LinearLayout
+				        a:orientation="horizontal"
+						a:layout_width="260dp"
+					    a:layout_height="98dp"
+					    a:background="textbox_01_2.9">
+				        
+			  		    <!-- 항목 뷰-->
+			  		    <LinearLayout
+			  		        a:layout_width="90dp"
+			  		        a:layout_height="fill_parent"
+			  		        a:layout_marginLeft="9dp"
+			  		        a:orientation="vertical">
+			  		        <TextView
+			  		            a:layout_marginTop="10dp"
+								a:text="상품명"
+								a:text_eng="Product"
+								a:textSize="21pt"
+								a:textColor="#999999"/>
+			  		        <TextView
+			  		            a:layout_marginTop="8dp"
+								a:text="상품종류"
+								a:text_eng="Type"
+								a:textSize="21pt"
+								a:textColor="#999999"/>
+			  		        <TextView
+			  		            a:layout_marginTop="8dp"
+			  		            a:layout_marginBottom="3dp"
+								a:text="상품금액"
+								a:text_eng="Cost"
+								a:textSize="21pt"
+								a:textColor="#999999"/>
+			  		    </LinearLayout>
+			  		    <!-- 내용 뷰 -->
+			  		    <LinearLayout
+			  		        a:layout_width="wrap_content"
+			  		        a:layout_height="fill_parent"
+			  		        a:orientation="vertical">
+			  		        <TextView
+			  		            a:layout_marginTop="8dp"
+								a:id = "ItemName"
+								a:textSize="23pt"
+								a:textColor="#ffffff"/>
+			  		        <TextView
+			  		            a:layout_marginTop="7dp"
+								a:id = "ItemUseDate"
+								a:textSize="23pt"
+								a:textColor="#ffffff"/>
+			  		        <TextView
+			  		            a:layout_marginTop="7dp"
+			  		            a:layout_marginBottom="1dp"
+								a:id = "ItemPrice"
+								a:textSize="23pt"
+								a:textColor="#ffffff"/>
+			  		    </LinearLayout>
+			  		    
+			  		</LinearLayout>
+				  		
+	                
+	            </LinearLayout>
+	            
+	            <!-- 정식판 전환 상품인 경우 나타나는 문구  -->
+	            <LinearLayout
+						a:layout_width="fill_parent"
+					    a:layout_height="wrap_content"
+					    a:gravity="center"
+	  		            a:layout_marginBottom="10dp">
+		            <TextView
+	  		            a:gravity="center"
+						a:id = "finalVersion_Item"
+						a:textSize="21pt"
+						a:textColor="#999999"
+						a:text="본 상품은 T store에서 판매 중인 정식판\n어플리케이션과 동일한 상품임을\n알려드리며, T store 구매내역에서 구매\n여부에 대해 확인 하실 수 있습니다."/>
+	            </LinearLayout>
+	            
+	            <!-- 판매자 정보 뷰 -->
+	            <LinearLayout
+	                a:orientation="vertical"
+	                a:layout_marginLeft="14dp"
+	                a:layout_marginBottom="10dp"
+					a:layout_width="fill_parent"
+				    a:layout_height="wrap_content">
+				    <!-- 판매자 정보 뷰  타이틀-->
+				    <LinearLayout
+				        a:orientation="horizontal"
+				        a:layout_width="fill_parent"
+				        a:layout_height="wrap_content"
+				        a:layout_marginBottom="5dp">
+				        <ImageView
+							a:src="icon_title_01"
+							a:layout_width="2dp"
+							a:layout_height="21dp"/>
+				        <LinearLayout
+					    	a:layout_width="wrap_content"
+					    	a:layout_height="21dp"
+					    	a:layout_marginLeft="8dp">
+						    <TextView
+								a:text="판매자 정보"
+								a:text_eng="Seller Information"
+								a:textSize="21px"
+								a:textColor="#999999"/>
+					    </LinearLayout>
+				    </LinearLayout>
+				    
+				    <!-- 판매자 정보 뷰  테이블-->
+				    <LinearLayout
+				        a:orientation="horizontal"
+						a:layout_width="260dp"
+					    a:layout_height="wrap_content"
+					    a:background="textbox_01_2.9">
+				        <!-- 항목 뷰-->
+			  		    <LinearLayout
+			  		        a:layout_width="90dp"
+			  		        a:layout_height="wrap_content"
+			  		        a:layout_marginLeft="9dp"
+			  		        a:layout_marginBottom="5dp"
+			  		        a:orientation="vertical">
+			  		        <TextView
+			  		            a:layout_marginTop="10dp"
+			  		            a:layout_height="24dp"
+								a:text="판매회원"
+								a:text_eng="Name"
+								a:textSize="21pt"
+								a:textColor="#999999"/>
+			  		        <TextView
+			  		            a:layout_marginTop="8dp"
+			  		            a:layout_height="24dp"
+								a:text="E-mail"
+								a:textSize="21pt"
+								a:textColor="#999999"/>
+			  		        <TextView
+			  		            a:id="seller_tel_num"
+			  		            a:layout_height="24dp"
+			  		            a:layout_marginTop="8dp"
+								a:text="대표전화번호"
+								a:text_eng="Phone"
+								a:textSize="21pt"
+								a:textColor="#999999"/>
+			  		    </LinearLayout>
+			  		    <!-- 내용 뷰 -->
+			  		    <LinearLayout
+			  		        a:layout_width="wrap_content"
+			  		        a:layout_height="wrap_content"
+			  		        a:layout_marginRight="5dp"
+			  		        a:layout_marginBottom="5dp"
+			  		        a:orientation="vertical">
+			  		        <TextView
+			  		            a:id="seller_name_view"
+			  		            a:layout_height="24dp"
+			  		            a:layout_marginTop="10dp"
+								a:textSize="23pt"
+								a:textColor="#FF7E19"/>
+			  		        <TextView
+			  		            a:layout_width="163dp"
+			  		            a:layout_height="24dp"
+			  		            a:id="seller_mail_view"
+			  		            a:layout_marginTop="8dp"
+								a:textSize="23pt"
+								a:textColor="#FF7E19"/>
+			  		        <TextView
+			  		            a:id="seller_tel_num_view"
+			  		            a:layout_height="24dp"
+			  		            a:layout_marginTop="8dp"
+								a:textSize="21pt"
+								a:textColor="#FF7E19"/>
+			  		    </LinearLayout>
+				    </LinearLayout>
+				        
+	                
+	            </LinearLayout>
+	            
+	            <!-- 결제금액 할인 뷰 -->
+	            <LinearLayout
+	                a:orientation="vertical"
+	                a:layout_marginLeft="14dp"
+	                a:layout_marginBottom="10dp"
+					a:layout_width="fill_parent"
+				    a:layout_height="wrap_content">
+				    <!-- 결제금액 할인 뷰  타이틀-->
+				    <LinearLayout
+				        a:orientation="horizontal"
+				        a:layout_width="fill_parent"
+				        a:layout_height="wrap_content"
+				        a:layout_marginBottom="5dp">
+				        <ImageView
+							a:src="icon_title_01"
+							a:layout_width="2dp"
+							a:layout_height="21dp"/>
+				        <LinearLayout
+					    	a:layout_width="wrap_content"
+					    	a:layout_height="21dp"
+					    	a:layout_marginLeft="8dp">
+						    <TextView
+								a:text="결제금액할인"
+								a:text_eng="Discount"
+								a:textSize="21px"
+								a:textColor="#999999"/>
+					    </LinearLayout>
+				    </LinearLayout>
+				    
+				    <!-- 결제금액 뷰  테이블-->
+				    <LinearLayout
+				        a:orientation="vertical"
+						a:layout_width="260dp"
+					    a:layout_height="235dp"
+					    a:background="textbox_01_2.9">
+				        
+				        <!-- OK캐쉬백 포인트 항목 -->
+				        <TextView
+				            a:layout_marginTop="12dp"
+				            a:layout_marginLeft="8dp"
+							a:text="OK캐쉬백포인트"
+							a:text_eng="OK Cashbag Point"
+							a:textSize="21px"
+							a:textColor="#999999"/>
+				        <LinearLayout
+				            a:layout_marginLeft="8dp"
+				            a:layout_marginRight="9dp"
+				            a:layout_marginBottom="3dp"
+				            a:orientation="horizontal"
+				            a:layout_width="fill_parent"
+					    	a:layout_height="wrap_content">
+				            <TextView
+				                a:layout_width="146dp"
+					    		a:layout_height="26dp"
+					    		a:id="ItemOCB"
+								a:textSize="23pt"
+								a:textColor="#FF7E19">
+					    	</TextView>
+					    	<Button
+					    	    a:id="OCBBtn"
+					    	    a:gravity = "center"
+				                a:layout_width="98dp"
+					    		a:layout_height="26dp"
+					    		a:offImage="bt_01_nor.9" 
+						    	a:onImage="bt_01_sel.9">
+					    	</Button>
+				        </LinearLayout>
+				        <!-- 점선 -->
+				        <LinearLayout
+				            a:id="dot_line"
+				            a:layout_marginLeft="8dp"
+				            a:layout_marginRight="5dp"
+				            a:layout_marginBottom="5dp"
+							a:layout_width="fill_parent"
+						    a:layout_height="1dp"
+						    a:background="dot_line">
+					    </LinearLayout>
+				        <!-- 도토리 항목 -->
+				        <TextView
+				            a:layout_marginLeft="8dp"
+							a:text="도토리"
+							a:text_eng="Dotori"
+							a:textSize="21px"
+							a:textColor="#999999"/>
+				        <LinearLayout
+				            a:layout_marginLeft="8dp"
+				            a:layout_marginRight="9dp"
+				            a:layout_marginBottom="3dp"
+							a:orientation="horizontal"
+				            a:layout_width="fill_parent"
+					    	a:layout_height="wrap_content">
+				            <TextView
+				                a:layout_width="146dp"
+					    		a:layout_height="26dp"
+					    		a:id="ItemDotori"
+								a:textSize="23pt"
+								a:textColor="#FF7E19">
+					    	</TextView>
+					    	<Button
+					    	    a:id="DotoriBtn"
+				                a:gravity = "center"
+				                a:layout_width="98dp"
+					    		a:layout_height="26dp"
+					    		a:offImage="bt_01_nor.9" 
+						    	a:onImage="bt_01_sel.9">
+					    	</Button>
+				        </LinearLayout>
+				        <!-- 점선 -->
+				        <LinearLayout
+				            a:id="dot_line"
+				            a:layout_marginLeft="8dp"
+				            a:layout_marginRight="8dp"
+				            a:layout_marginBottom="5dp"
+							a:layout_width="fill_parent"
+						    a:layout_height="1dp"
+						    a:background="dot_line">
+					    </LinearLayout>
+				        <!-- 컬쳐캐쉬(문화상품권) 항목 -->
+				        <TextView
+							a:layout_marginLeft="8dp"
+							a:text="컬쳐캐쉬(문화상품권)"
+							a:text_eng="Culture Cash"
+							a:textSize="21px"
+							a:textColor="#999999"/>
+				        <LinearLayout
+				            a:layout_marginLeft="8dp"
+				            a:layout_marginRight="9dp"
+				            a:layout_marginBottom="3dp"
+							a:orientation="horizontal"
+				            a:layout_width="fill_parent"
+					    	a:layout_height="wrap_content">
+				            <TextView
+				                a:layout_width="146dp"
+					    		a:layout_height="26dp"
+					    		a:id="ItemCultureCash"
+								a:textSize="23pt"
+								a:textColor="#FF7E19">
+					    	</TextView>
+					    	<Button
+					    	    a:id="CultureBtn"
+					    	    a:gravity = "center"
+				                a:layout_width="98dp"
+					    		a:layout_height="26dp"
+					    		a:offImage="bt_01_nor.9" 
+						    	a:onImage="bt_01_sel.9">
+					    	</Button>
+				        </LinearLayout>
+				        <!-- 점선 -->
+				        <LinearLayout
+				            a:id="dot_line"
+				            a:layout_marginLeft="8dp"
+				            a:layout_marginRight="8dp"
+				            a:layout_marginBottom="5dp"
+							a:layout_width="fill_parent"
+						    a:layout_height="1dp"
+						    a:background="dot_line">
+					    </LinearLayout>
+				        <!-- T store Cash 항목 -->
+				        <TextView
+							a:layout_marginLeft="8dp"
+							a:text="T store Cash"
+							a:textSize="21px"
+							a:textColor="#999999"/>
+				        <LinearLayout 
+				            a:layout_marginLeft="8dp"
+				            a:layout_marginRight="9dp"
+				            a:layout_marginBottom="3dp"
+							a:orientation="horizontal"
+				            a:layout_width="fill_parent"
+					    	a:layout_height="wrap_content">
+				            <TextView
+				                a:layout_width="146dp"
+					    		a:layout_height="26dp"
+					    		a:id = "ItemCash"
+								a:textSize="23pt"
+								a:textColor="#FF7E19">
+					    	</TextView>
+					    	<Button
+					    	    a:id="TcashBtn"
+					    	    a:gravity = "center"
+				                a:layout_width="98dp"
+					    		a:layout_height="26dp"
+					    		a:offImage="bt_01_nor.9" 
+						    	a:onImage="bt_01_sel.9">
+					    	</Button>
+				        </LinearLayout>
+				    </LinearLayout>
+				        
+	                
+	            </LinearLayout>
+	            
+	            <!-- 결제내역 뷰 -->
+	            <LinearLayout
+	                a:orientation="vertical"
+	                a:layout_marginLeft="14dp"
+	                a:layout_marginBottom="10dp"
+					a:layout_width="fill_parent"
+				    a:layout_height="wrap_content">
+				    <!-- 결제내역 뷰  타이틀-->
+				    <LinearLayout
+				        a:orientation="horizontal"
+				        a:layout_width="fill_parent"
+				        a:layout_height="wrap_content"
+				        a:layout_marginBottom="5dp">
+				        <ImageView
+							a:src="icon_title_01"
+							a:layout_width="2dp"
+							a:layout_height="21dp"/>
+				        <LinearLayout
+					    	a:layout_width="wrap_content"
+					    	a:layout_height="21dp"
+					    	a:layout_marginLeft="8dp">
+						    <TextView
+								a:text="결제내역"
+								a:text_eng="Payments Details"
+								a:textSize="21px"
+								a:textColor="#999999"/>
+					    </LinearLayout>
+				    </LinearLayout>
+				    
+				    <!-- 결제내역 뷰  테이블-->
+				    <LinearLayout
+				        a:orientation="horizontal"
+						a:layout_width="260dp"
+					    a:layout_height="66dp"
+					    a:background="textbox_01_2.9">
+				        
+				        <!-- 항목 뷰-->
+			  		    <LinearLayout
+			  		        a:layout_width="70dp"
+			  		        a:layout_width_eng="100dp"
+			  		        a:layout_height="wrap_content"
+			  		        a:layout_marginLeft="9dp"
+			  		        a:orientation="vertical">
+			  		        <TextView
+			  		            a:layout_marginTop="10dp"
+								a:text="할인금액"
+								a:text_eng="Total Discount"
+								a:textSize="21pt"
+								a:textColor="#999999"/>
+			  		        <TextView
+			  		            a:layout_marginTop="8dp"
+								a:text="결제금액"
+								a:text_eng="Final Payments"
+								a:textSize="21pt"
+								a:textColor="#999999"/>
+			  		    </LinearLayout>
+			  		    <!-- 내용 뷰 -->
+			  		    <LinearLayout
+			  		        a:layout_width="wrap_content"
+			  		        a:layout_height="wrap_content"
+			  		        a:layout_marginRight="10dp"
+			  		        a:orientation="vertical">
+			  		        <TextView
+			  		            a:id="Discount"
+			  		            a:layout_width="171dp"
+			  		            a:layout_width_eng="141dp"
+			  		            a:gravity="right"
+			  		            a:layout_marginTop="8dp"
+								a:textSize="23pt"
+								a:textColor="#FF7E19"/>
+			  		        <TextView
+			  		            a:id="Payments"
+			  		            a:layout_width="171dp"
+			  		            a:layout_width_eng="141dp"
+			  		            a:gravity="right"
+			  		            a:layout_marginTop="7dp"
+								a:textSize="23pt"
+								a:textColor="#FF7E19"/>
+			  		    </LinearLayout>
+				           	 
+				  		
+				    </LinearLayout>
+	                
+	            </LinearLayout>
+	            
+	            
+	            
+	            <!-- OK 캐쉬백 적립 뷰 Unregistered/registered 두 종류-->
+	            <LinearLayout
+	                a:id="unregistered"
+	                a:orientation="vertical"
+	                a:layout_marginLeft="14dp"
+	                a:layout_marginBottom="13dp"
+					a:layout_width="fill_parent"
+				    a:layout_height="wrap_content">
+				    <!-- OK 캐쉬백 뷰  타이틀-->
+				    <LinearLayout
+				        a:orientation="horizontal"
+				        a:layout_width="fill_parent"
+				        a:layout_height="wrap_content"
+				        a:layout_marginBottom="5dp">
+				        <ImageView
+							a:src="icon_title_01"
+							a:layout_width="2dp"
+							a:layout_height="21dp"/>
+				        <LinearLayout
+					    	a:layout_width="wrap_content"
+					    	a:layout_height="21dp"
+					    	a:layout_marginLeft="8dp">
+						    <TextView
+								a:text="OK캐쉬백 적립"
+								a:text_eng="OK cashbag Point Saving"
+								a:textSize="21px"
+								a:textColor="#999999"/>
+					    </LinearLayout>
+				    </LinearLayout>
+				    
+				    <!-- OK캐쉬백 뷰  테이블-->
+				    <LinearLayout
+				        a:gravity="center"
+				        a:orientation="vertical"
+						a:layout_width="260dp"
+					    a:layout_height="136dp"
+					    a:background="textbox_01_2.9">
+				        <TextView
+				            a:layout_marginLeft="8dp"
+							a:text="현재 등록하신 OK캐쉬백 카드가\n없습니다. OK캐쉬백 카드를 등록하시면\n구매금액의 4%가 OK캐쉬백 포인트로\n적립됩니다."
+							a:text_eng="OK cash back cards do not currently registered. If you register OK cash back card is 4% of purchase price will be credited to OK cash back points."
+							a:textSize="21px"
+							a:textColor="#999999"/>
+				        <LinearLayout
+					        a:gravity="center"
+							a:layout_width="wrap_content"
+						    a:layout_height="wrap_content">
+				            <Button 
+				                a:gravity="center"
+							    a:layout_width="98dp" 
+							    a:layout_height="33dp" 
+							    a:layout_height_eng="40dp"
+							    a:id="OCBRegister"
+							    a:textSize="18px"
+								a:textColor="#DDDDDD"
+						    	a:offImage="bt_01_nor.9" 
+						    	a:onImage="bt_01_sel.9"/>
+				        </LinearLayout>
+				        
+				    </LinearLayout>
+	                
+	            </LinearLayout>
+	            
+	            <LinearLayout
+	                a:id="registered"
+	                a:orientation="vertical"
+	                a:layout_marginLeft="14dp"
+	                a:layout_marginBottom="13dp"
+					a:layout_width="fill_parent"
+				    a:layout_height="wrap_content">
+				    <!-- OK 캐쉬백 뷰  타이틀-->
+				    <LinearLayout
+				        a:orientation="horizontal"
+				        a:layout_width="fill_parent"
+				        a:layout_height="wrap_content"
+				        a:layout_marginBottom="5dp">
+				        <ImageView
+							a:src="icon_title_01"
+							a:layout_width="2dp"
+							a:layout_height="21dp"/>
+				        <LinearLayout
+					    	a:layout_width="wrap_content"
+					    	a:layout_height="21dp"
+					    	a:layout_marginLeft="8dp">
+						    <TextView
+								a:text="OK캐쉬백 적립"
+								a:text_eng="OK cashbag Point Saving"
+								a:textSize="21px"
+								a:textColor="#999999"/>
+					    </LinearLayout>
+				    </LinearLayout>
+				    <TextView
+				        a:layout_marginBottom="5dp"
+						a:text="구매금액의 4%가 OK캐쉬백 포인트로 적립됩니다."
+						a:text_eng="4% of purchase price will be credited to OK cash back points."
+						a:textSize="21px"
+						a:textColor="#999999"/>
+				    <!-- OK캐쉬백 뷰  테이블-->
+				    <LinearLayout
+				        a:orientation="vertical"
+				        a:gravity="center"
+						a:layout_width="260dp"
+					    a:layout_height="106dp"
+					    a:layout_height_eng="120dp"
+					    a:background="textbox_01_2.9">
+				        <TextView
+				            a:layout_marginTop="7dp"
+				            a:layout_marginBottom="4dp"
+							a:text="등록된 OK 캐쉬백 포인트 카드번호"
+							a:text_eng="OK Cashbag point card number\nregistered"
+							a:textSize="21px"
+							a:textColor="#999999"/>
+				        <TextView
+				            a:id="OCBCardNumber"
+				            a:layout_marginBottom="7dp"
+							a:textSize="21px"
+							a:textColor="#FF7E19"/>
+				        <LinearLayout
+					        a:orientation="horizontal"
+					        a:gravity="center"
+							a:layout_width="wrap_content"
+						    a:layout_height="wrap_content">
+				            <Button 
+							    a:gravity="center"
+							    a:layout_width="98dp" 
+							    a:layout_height="33dp"
+							    a:id="OCB_Card_Change" 
+								a:textColor="#DDDDDD"
+						    	a:offImage="bt_01_nor.9" 
+						    	a:onImage="bt_01_sel.9"/>
+				            <Button 
+							    a:gravity="center"
+							    a:layout_width="98dp" 
+							    a:layout_height="33dp"
+							    a:id="OCB_Card_Del"  
+								a:textColor="#DDDDDD"
+						    	a:offImage="bt_01_nor.9" 
+						    	a:onImage="bt_01_sel.9"/>
+				        </LinearLayout>
+				    </LinearLayout>
+	                
+	            </LinearLayout>
+	            
+	            <!-- 안내문구 뷰 -->
+	            <LinearLayout
+	                a:orientation="vertical"
+	                a:layout_marginLeft="14dp"
+	                a:layout_marginBottom="15dp"
+					a:layout_width="fill_parent"
+				    a:layout_height="wrap_content">
+				    <TextView
+						a:id="infoText"
+						a:textSize="21px"
+						a:textColor="#999999"/>
+				    <TextView
+						a:text="*T store Cash는 T store웹사이트\n(www.tstore.co.kr)의 마이 페이지에서 충전 할 수 있습니다."
+						a:text_eng="* T store Cash T store the website\n (www.tstore.co.kr) can be recharged from the My Page."
+						a:textSize="21px"
+						a:textColor="#999999"/>
+	            </LinearLayout>
+	            
+			</LinearLayout>
+	            
+        </ScrollView>	
+         
+        <!-- 버튼 뷰 -->
+        <LinearLayout
+            a:orientation="horizontal"
+            a:layout_width="fill_parent"
+            a:layout_height="41dp">
+	        <Button 
+	    		a:layout_marginLeft="11dp"
+				a:layout_width="131dp" 
+				a:layout_height="41dp" 
+				a:offImage_eng="btn_buy_nor_h_e" 
+			    a:onImage_eng="btn_buy_sel_h_e"
+			    a:offImage="btn_buy_nor_h" 
+			    a:onImage="btn_buy_sel_h"/>
+			<Button 
+				a:layout_marginLeft="6dp"
+			    a:layout_width="131dp" 
+			    a:layout_height="41dp" 
+			    a:offImage_eng="btn_cancel_nor_h_e" 
+				a:onImage_eng="btn_cancel_sel_h_e"
+		    	a:offImage="btn_cancel_nor_h" 
+		    	a:onImage="btn_cancel_sel_h"/>
+            
+        </LinearLayout>
+        
+        <!-- SDK 버전 뷰 -->
+        <LinearLayout>
+            <TextView  
+				a:id="Version"
+		     	a:layout_width="fill_parent" 
+				a:layout_height="wrap_content" 
+				a:layout_marginLeft="10dp"
+				a:text="version"
+				a:textSize="12pt"
+				a:textColor="#999999"/>
+        </LinearLayout>
+	</LinearLayout>
+
+</LinearLayout>

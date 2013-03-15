@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:a="http://schemas.android.com/apk/res/android"
+    a:orientation="vertical"
+    a:layout_width="fill_parent"
+    a:layout_height="fill_parent"
+    a:gravity="center">
+	<LinearLayout a:orientation="vertical"
+	    		  a:layout_width="460dp"
+	    		  a:layout_height="305dp"
+	    		  a:background="popup_bg_all.9"
+	    		  a:layout_marginTop="20dp"
+	    		  a:layout_marginLeft="5dp">
+		<TextView a:layout_width="fill_parent"
+	       		  a:gravity="center" 
+				  a:layout_height="wrap_content" 
+				  a:layout_marginTop="15dp"
+				  a:layout_marginLeft="10dp"
+				  a:textSize="26pt"
+			   	  a:text="인증안내"
+			   	  a:text_eng="Certification Guide"/>	
+		<LinearLayout a:orientation="vertical"
+					  a:layout_width="wrap_content"
+					  a:layout_marginTop="5dp"
+			  		  a:layout_marginLeft="15dp"
+	    			  a:layout_height="wrap_content">		   	  
+				<TextView a:layout_width="fill_parent" 
+						  a:layout_height="wrap_content" 
+						  a:textSize="22pt"
+						  a:textColor="#999999" 
+					   	  a:text="타사 고객인 경우 구매 혹은 구매내역 조회 시 최초 주민 번호를\n입력해야 합니다."
+					   	  a:text_eng="If you are a customer purchases a \nthird-party purchase or social security number lookup, you must enter first."/>
+		</LinearLayout>
+
+		<LinearLayout a:orientation="vertical"
+				  	a:layout_width="fill_parent"
+    			  	a:layout_height="fill_parent">
+			<LinearLayout
+					a:orientation="horizontal"
+					a:layout_width="106dp"
+					a:layout_height="16dp"
+					a:layout_marginTop="10dp"
+					a:layout_marginLeft="15dp">
+				<LinearLayout
+					a:background="icon_bullet"
+					a:layout_width="4dp"
+    	  			a:layout_height="21dp">
+				</LinearLayout>
+				<TextView a:layout_width="wrap_content"
+    		 			  a:layout_height="wrap_content"
+    		  			  a:textSize="20pt"
+    		  			  a:text="명의자 주민번호"
+    		  			  a:text_eng="Social security number myeonguija"
+    		  			  a:layout_marginLeft="5dp">
+    	 	  	</TextView>
+			</LinearLayout>
+			
+     		<LinearLayout a:orientation="horizontal"
+	    			  a:layout_width="fill_parent"
+	    			  a:layout_height="wrap_content"
+	    			  a:layout_marginLeft="13dp"
+	    			  a:focusableInTouchMode="true" 
+	    			  a:layout_marginTop="7dp"
+	    			  a:gravity="center">
+	    			 <EditText 	a:id ="JuminText1"
+	    		   				a:layout_width="131dp"
+	    		  				a:layout_height="48dp"
+	    		  				a:maxLength="6"	
+	    		  				a:layout_marginLeft="3dp"/>
+	    		   <EditText 	a:id ="JuminText2"
+	    		   				a:layout_width="131dp"
+	    		  				a:layout_height="48dp"
+	    		  				a:layout_marginLeft="6dp"
+	    		  				a:password="true"
+	    		  				a:maxLength="7"	/>
+	    	</LinearLayout>
+	    	
+			<LinearLayout 
+				  a:layout_width="wrap_content"
+				  a:layout_marginTop="5dp"
+		  		  a:layout_marginLeft="15dp"
+    			  a:layout_height="wrap_content">	
+    			 <ScrollView
+		    	    a:layout_width="420dp"
+					a:layout_height="50dp">
+					<LinearLayout
+					    a:layout_width="415dp">	   	  
+						<TextView a:layout_width="fill_parent" 
+								  a:layout_height="wrap_content" 
+								  a:textSize="22pt"
+								  a:textColor="#999999" 
+							   	  a:text="정통망법 개정 시 주민번호 수집제한에 대한 혼란을 줄이고, 이용자/사업자에게 충분한 커뮤니케이션이 필요하여 정부에서 계도기간(2012. 8. 18~2013. 2. 18의 6개월)을 두었고, SK플래닛의 T store 서비스는 정부의 구체적인 대체수단 가이드라인에 따른 시스템 변경 등의 준비를 통해 빠른 시간 내 주민번호 수집/이용을 제한하고 대체수단을 서비스에 적용할 것입니다."/>
+					</LinearLayout>
+				</ScrollView>
+			</LinearLayout>
+     		<LinearLayout a:orientation="horizontal"
+			   			  a:layout_marginTop="7dp"
+						  a:layout_width="fill_parent"
+						  a:layout_height="wrap_content"
+						  a:gravity="center">
+						<Button a:layout_marginLeft="10dp"
+								a:layout_width="131dp" 
+								a:layout_height="41dp" 
+								a:offImage_eng="btn_con_nor_e"
+								a:onImage_eng="btn_con_sel_e"
+								a:offImage="btn_con_nor" 
+								a:onImage="btn_con_sel">
+						</Button>
+		     			<Button a:layout_marginLeft="6dp"
+								a:layout_width="131dp" 
+								a:layout_height="41dp" 
+								a:offImage_eng="btn_cancel_nor_h_e" 
+								a:onImage_eng="btn_cancel_sel_h_e"
+								a:offImage="btn_cancel_nor_h" 
+								a:onImage="btn_cancel_sel_h">
+						</Button>
+			</LinearLayout>
+			<TextView			a:id 	= "Version"
+    					     	a:layout_width="fill_parent" 
+     							a:layout_height="wrap_content" 
+     							a:layout_marginLeft="10dp"
+     							a:textSize="12pt"
+     							a:textColor="#999999" 	/>
+		</LinearLayout>		
+	</LinearLayout>
+</LinearLayout>

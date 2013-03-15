@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:a="http://schemas.android.com/apk/res/android"
+    a:layout_width="fill_parent"
+    a:layout_height="fill_parent"
+    a:gravity="center" >
+    
+    <!-- 전체 레이아웃 -->
+    <LinearLayout  
+		a:background="popup_bg_all_2.9"
+		a:orientation="vertical"
+		a:layout_width="296dp"
+    	a:layout_height="381dp" >
+    	
+        <!-- 타이틀 -->	
+        <TextView
+            a:layout_width="fill_parent"
+            a:layout_height="50dp"
+            a:gravity="center"
+            a:text="OK 캐쉬백 등록"
+            a:text_eng="OK cashbag Registration"
+            a:textSize="30px"
+            a:textColor="#ffffff"/>
+        <!--  안내문구 -->
+        <TextView
+            a:layout_width="fill_parent"
+            a:layout_height="wrap_content"
+            a:layout_marginLeft="13dp"
+            a:layout_marginBottom="11dp"
+            a:text="등록된 카드번호의 OK 캐쉬백으로\n포인트가 적립됩니다."
+             a:text_eng="Point of the card number is registered\nto earn cash back is OK."
+            a:textSize="21px"
+            a:textColor="#999999"/>
+        <LinearLayout
+			a:layout_width="260dp"
+		    a:layout_height="108dp"
+		    a:layout_marginLeft="13dp"
+		    a:layout_marginBottom="10dp"
+		    a:background="textbox_01_2.9">
+            <TextView
+	            a:layout_width="fill_parent"
+	            a:layout_height="wrap_content"
+	            a:layout_marginLeft="10dp"
+	            a:layout_marginTop="7dp"
+	            a:layout_marginBottom="6dp"
+            	a:text="OK캐쉬백 포인트를 사용한 금액은\n적립금액에서 제외됩니다.\nT store Cash 중 선물 또는 증정용\n기프트 카드로 충전된 금액은\n적립금액에서 제외됩니다."
+            	a:text_eng="OK with cash back amount\nof points earned will be excluded\nfrom the amount.\nPresented in T store Cash gifts or \ngift cards for the amount charged" 
+	            a:textSize="18px"
+	            a:textColor="#999999"/>
+        </LinearLayout>
+        <TextView
+            a:layout_width="fill_parent"
+            a:layout_height="wrap_content"
+            a:layout_marginLeft="13dp"
+            a:layout_marginBottom="7dp"
+            a:text="카드번호"
+            a:text_eng="Card Number"
+            a:textSize="21px"
+            a:textColor="#ffffff"/>
+        <LinearLayout
+	        a:orientation="horizontal"
+			a:layout_width="fill_parent"
+		    a:layout_height="wrap_content"
+		    a:layout_marginLeft="13dp"
+		    a:layout_marginBottom="13dp">
+            <EditText
+            	a:maxLength="4"
+            	a:inputType="2"
+                a:id ="OCBRegText1"
+                a:background="input_box_nor2.9"
+                a:layout_width="62dp"
+		    	a:layout_height="30dp"
+		    	a:ocbTextColor=""/>
+            <EditText
+            	a:maxLength="4"
+            	a:inputType="2"
+                a:id ="OCBRegText2"
+                a:background="input_box_nor2.9"
+                a:layout_width="62dp"
+		    	a:layout_height="30dp"
+		    	a:layout_marginLeft="4dp"
+		    	a:ocbTextColor=""/>
+            <EditText
+            	a:maxLength="4"
+            	a:inputType="2"
+                a:id ="OCBRegText3"
+                a:background="input_box_nor2.9"
+                a:layout_width="62dp"
+		    	a:layout_height="30dp"
+		    	a:layout_marginLeft="4dp"
+		    	a:ocbTextColor=""/>
+            <EditText
+            	a:maxLength="4"
+            	a:inputType="2"
+                a:id ="OCBRegText4"
+                a:background="input_box_nor2.9"
+                a:layout_width="62dp"
+		    	a:layout_height="30dp"
+		    	a:layout_marginLeft="4dp"
+		    	a:ocbTextColor=""/>
+            
+        </LinearLayout>
+        
+        <TextView
+            a:layout_width="fill_parent"
+            a:layout_height="wrap_content"
+            a:layout_marginLeft="13dp"
+            a:layout_marginBottom="12dp"
+           	a:text="OK로고가 새겨진 카드번호를 입력해주세요."
+           	a:text_eng="OK logo please enter the card number."
+            a:textSize="18px"
+            a:textColor="#999999"/>
+        <LinearLayout
+	        a:gravity="center"
+			a:layout_width="fill_parent"
+		    a:layout_height="wrap_content"
+		    a:layout_marginBottom="36dp" >
+            <Button 
+                a:id="OCBReg"
+            	a:padding="0dp"
+			    a:gravity="center"
+			    a:layout_width="98dp" 
+			    a:layout_height="33dp"
+			    a:text="등록하기"
+			    a:text_eng="Registration"
+			    a:textSize="18px"
+				a:textColor="#DDDDDD"
+		    	a:offImage="bt_01_nor.9" 
+		    	a:onImage="bt_01_sel.9"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

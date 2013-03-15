@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:a="http://schemas.android.com/apk/res/android"
+  a:layout_width="fill_parent"
+  a:layout_height="fill_parent"
+  a:gravity="center">
+  	<LinearLayout	
+	  	a:background="popup_bg_all.9"
+		a:layout_marginLeft="6dp"
+		a:orientation="vertical"
+		a:gravity="center"
+		a:layout_width="296dp"
+		a:layout_height="wrap_content">
+		<TextView  	
+			a:layout_width="wrap_content" 
+			a:layout_height="43dp"
+			a:text="SMS 인증"
+			a:text_eng="SMS Authentication"
+			a:textSize="27pt"
+			a:textColor="#CFCFCF"
+			a:gravity="center"/>
+		<EditText  	
+		    a:background="textbox_.9"
+			a:id="lgu_auth_text"
+			a:layout_width="260dp" 
+			a:layout_height="45dp"
+			a:layout_marginRight="5dp"
+			a:layout_marginBottom ="8dp"
+			a:lgu_auth_text=""
+			a:textSize="24pt"
+			a:textSize_eng="22pt"
+			a:gravity="right"
+			a:textColor="#999999"/>
+		<Button 
+		    a:id = "lgu_smsAuth_btn"
+		    a:gravity="center"
+		    a:layout_width="262dp" 
+		    a:layout_height="33dp" 
+		    a:layout_marginRight="5dp"
+		    a:layout_marginBottom = "10dp"
+		    a:textColor="#ffffff"
+	    	a:offImage="bt_01_nor.9" 
+	    	a:onImage="bt_01_sel.9"/>
+    	<TextView  	
+    		a:layout_width="wrap_content" 
+			a:layout_height="80dp"
+			a:layout_marginRight="5dp"
+			a:layout_marginBottom = "14dp"
+			a:text="안전한 결제를 위해 SMS 인증서비스를\n제공하고 있습니다.\n인증번호 수신 시 자동으로\n 적용되오니, 인증 번호 요청 후 잠시만 기다려주세요."
+			a:text_eng="SMS for secure payment and authentication\nservices are provided. SMS upon receiving authorization number automatically applied,\nin regards to"
+			a:textSize="19pt"
+			a:textColor="#999999"
+			a:gravity="center"/>
+    	<LinearLayout	
+		  	a:background="textbox_.9"
+			a:layout_marginLeft="0dp"
+			a:orientation="vertical"
+			a:layout_width="260dp" 
+			a:layout_height="wrap_content"
+			a:layout_marginRight="5dp"
+			a:layout_marginBottom ="8dp"
+			a:textSize="24pt"
+			a:gravity="center">
+			<TextView  	
+				a:layout_width="wrap_content" 
+				a:layout_height="wrap_content"
+				a:text="더욱 안전한 결제를 위해\n잠금 설정을 사용하실 수 있습니다."
+				a:text_eng="For a more secure payment can be\nused to set the lock."
+				a:textSize="19pt"
+				a:textColor="#999999"
+				a:gravity="center"
+				a:layout_marginTop = "4dp"
+				a:layout_marginBottom = "5dp"/>
+			<Button 
+			    a:layout_width="98dp" 
+			    a:layout_height="33dp" 
+			    a:layout_marginBottom = "6dp"
+			    a:offImage_eng="btn_locking_nor_e" 
+    			a:onImage_eng="btn_locking_sel_e"
+		    	a:offImage="btn_locking_nor" 
+		    	a:onImage="btn_locking_sel"
+		    	a:gravity="center"
+		    	a:padding="0dp"/>
+		</LinearLayout>
+		<LinearLayout 
+	    	a:gravity="center"
+			a:layout_width="fill_parent"
+		    a:layout_height="wrap_content"
+		    a:layout_marginRight="5dp"
+		    a:layout_marginBottom = "35dp">
+			<Button		
+				a:layout_width="131dp" 
+				a:layout_height="41dp"
+				a:gravity="center"
+				a:offImage_eng="bt_confirm_dim_e" 
+				a:onImage_eng="bt_confirm_dim_e"
+				a:offImage="bt_confirm_dim" 
+				a:onImage="bt_confirm_dim"		/>
+			<Button		
+				a:layout_width="131dp" 
+				a:layout_height="41dp"
+				a:gravity="center"
+				a:offImage_eng="btn_cancel_nor_h_e" 
+				a:onImage_eng="btn_cancel_sel_h_e"
+				a:offImage="btn_cancel_nor_h" 
+				a:onImage="btn_cancel_sel_h"		/> 
+		</LinearLayout>
+	</LinearLayout>
+</LinearLayout>

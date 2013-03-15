@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:a="http://schemas.android.com/apk/res/android"
+    a:layout_width="fill_parent"
+    a:layout_height="fill_parent"
+    a:gravity="center">
+
+    <!-- 전체 레이아웃 -->
+    <LinearLayout
+        a:background="popup_bg_all_2.9"
+		a:orientation="vertical"
+		a:layout_width="296dp"
+    	a:layout_height="wrap_content">
+    	
+	    <!-- 타이틀 -->
+		<TextView
+		    a:layout_width="fill_parent"
+            a:layout_height="43dp"
+		    a:gravity="center"
+		    a:text="컬쳐랜드 로그인"
+		    a:text_eng="Cultureland Login"
+		    a:textSize="30px"
+            a:textColor="#ffffff"/>
+		<LinearLayout
+		    a:background="textbox_01_2.9"
+		    a:orientation="vertical"
+		   	a:layout_width= "260dp" 
+		   	a:layout_height="wrap_content"
+		   	a:layout_marginLeft="13dp">
+		   	<!-- 아이디 -->
+		    <LinearLayout
+		        a:orientation="horizontal"
+				a:layout_width="fill_parent"
+			    a:layout_height="wrap_content"
+			    a:layout_marginTop="9dp"
+			    a:layout_marginBottom="9dp"
+                a:focusableInTouchMode="true">
+                <TextView
+		            a:layout_width="55dp"
+		            a:layout_height="wrap_content"
+		            a:layout_marginLeft="10dp"
+		           	a:text="아이디"
+		           	a:text_eng="ID"
+		            a:textSize="18px"
+		            a:textColor="#999999"/>
+                <EditText
+                    a:id="cultureID"
+                    a:inputType="AlphaNum"
+	                a:background="input_box_nor2.9"
+	                a:layout_width="fill_parent"
+			    	a:layout_height="wrap_content"
+			    	a:layout_marginLeft="7dp"
+			    	a:layout_marginRight="10dp"
+			    	a:ocbTextColor=""/>
+            </LinearLayout>
+            <!-- 비밀번호 -->
+		    <LinearLayout
+		        a:orientation="horizontal"
+				a:layout_width="fill_parent"
+			    a:layout_height="wrap_content"
+			    a:layout_marginBottom="8dp"
+                a:focusableInTouchMode="true">
+                <TextView
+		            a:layout_width="55dp"
+		            a:layout_height="wrap_content"
+		            a:layout_marginLeft="10dp"
+		           	a:text="비밀번호"
+		           	a:text_eng="Password"
+		            a:textSize="18px"
+		            a:textColor="#999999"/>
+                <EditText
+                    a:id="culturePW"
+                    a:inputType="AlphaNum"
+	                a:background="input_box_nor2.9"
+	                a:layout_width="fill_parent"
+			    	a:layout_height="wrap_content"
+			    	a:layout_marginLeft="7dp"
+			    	a:layout_marginRight="10dp"
+			    	a:ocbTextColor=""
+			    	a:password="true"/>
+            </LinearLayout>
+            <LinearLayout 
+				a:orientation="horizontal"
+				a:layout_width="fill_parent"
+			    a:layout_height="wrap_content"
+			    a:layout_marginBottom="10dp">
+	            <CheckBox
+			    	a:checkid="culture_login_checkbox"
+			    	a:layout_width="23dp"
+			    	a:layout_height="22dp"
+			    	a:onImage="checkbox_n"
+			    	a:layout_marginLeft="10dp"/>
+	            <TextView
+		            a:layout_marginLeft="3dp"
+		           	a:text="아이디를 저장합니다."
+		           	a:text_eng="Save ID"
+		            a:textSize="18px"
+		            a:textColor="#999999"/>
+	        </LinearLayout>
+	   	</LinearLayout>
+
+		
+		<TextView
+	            a:layout_width="fill_parent"
+	            a:layout_height="wrap_content"
+	            a:layout_marginTop="12dp"
+	            a:layout_marginLeft="13dp"
+	           	a:text="컬쳐캐쉬 결제 서비스 이용을 위해\n컬쳐랜드 로그인이 필요합니다.\n아이디/비밀번호를 입력해 주세요."
+	           	a:text_eng="Cash payment for service culture\nkeolchyeoraendeu Login required.\nplease enter ID password."
+	            a:textSize="21px"
+	            a:textColor="#999999"/>
+		
+		<LinearLayout 
+			a:layout_width="fill_parent"
+			a:layout_height="56dp"
+			a:layout_marginBottom="15dp"
+			a:gravity="center" >
+			<Button
+				a:id="cultureButton"
+			    a:layout_marginLeft="10dp"
+				a:layout_width="131dp" 
+				a:layout_height="41dp" 
+				a:offImage_eng="btn_con_nor_e"
+				a:onImage_eng="btn_con_sel_e"
+				a:offImage="btn_con_nor" 
+				a:onImage="btn_con_sel"/>
+		</LinearLayout>
+		
+	</LinearLayout>
+    
+</LinearLayout>

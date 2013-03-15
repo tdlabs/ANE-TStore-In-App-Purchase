@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:a="http://schemas.android.com/apk/res/android"
+    a:layout_width="fill_parent"
+    a:layout_height="fill_parent"
+    a:gravity="center" >
+    
+    <!-- 전체 레이아웃 -->
+    <LinearLayout  
+		a:background="popup_bg_all_2.9"
+		a:orientation="vertical"
+		a:layout_width="301dp"
+		a:layout_height="361dp"
+    	a:gravity="center">
+    	
+    	<!-- 타이틀 -->	
+        <TextView
+            a:layout_width="fill_parent"
+            a:layout_height="50dp"
+            a:gravity="center"
+            a:text="SMS 인증"
+            a:text_eng="SMS Authentication"
+            a:textSize="30px"
+            a:textColor="#ffffff"/>
+        <LinearLayout
+		  	a:layout_width="296p"
+			a:layout_height="240dp">
+	        
+	        <ScrollView
+	            a:layout_width="286dp"
+	            a:layout_height="fill_parent">
+	            
+	            <LinearLayout  
+	                a:orientation="vertical"
+					a:layout_width="fill_parent"
+			    	a:layout_height="fill_parent">
+	                <!-- 타이틀 인증 안내 문구 -->
+			        <TextView
+			            a:layout_width="fill_parent"
+			            a:layout_height="wrap_content"
+			            a:layout_marginLeft="13dp"
+			            a:layout_marginBottom="14dp"
+			            a:text="회원님은 유무선 연동 고객입니다. 도토리\n사용을 위해 휴대폰을 인증해 주세요."
+			            a:text_eng="Your customer is a wired and wireless integration.Please authenticate your\nmobile phone to use Acorn."
+			            a:textSize="21px"
+			            a:textColor="#999999"/>
+			        <LinearLayout  
+		                a:orientation="horizontal"
+						a:layout_width="fill_parent"
+				    	a:layout_height="wrap_content"
+				    	a:layout_marginBottom="7dp"
+				    	a:focusableInTouchMode="true">
+			            <TextView
+				            a:layout_width="wrap_content"
+				            a:layout_height="wrap_content"
+				            a:layout_marginLeft="13dp"
+				           	a:text="휴대폰 인증"
+				           	a:text_eng="Phone Authentication"
+				            a:textSize="18px"
+				            a:textColor="#999999"/>
+			            <EditText
+			                a:maxLength="6"
+			                a:inputType="2"	
+			                a:id="dotoriSmsAuthText"
+			                a:background="input_box_nor2.9"
+			                a:layout_width="174dp"
+			                a:layout_width_eng="154dp"
+					    	a:layout_height="30dp"
+					    	a:layout_marginLeft="12dp"
+					    	a:ocbTextColor=""/>
+			        </LinearLayout>
+			        <LinearLayout
+						a:layout_width="fill_parent"
+				    	a:layout_height="wrap_content"
+				    	a:gravity="center"
+				    	a:layout_marginBottom="14dp">
+			            <Button 
+			                a:id="getDotoriAuthNumBtn"
+						    a:gravity="center"
+						    a:layout_width="98dp" 
+						    a:layout_height="33dp"
+						    a:text="인증번호받기"
+						    a:text_eng="Receive Code"
+						    a:textSize="18px"
+							a:textColor="#DDDDDD"
+					    	a:offImage="bt_01_nor.9" 
+					    	a:onImage="bt_01_sel.9"/>
+			        </LinearLayout>
+			        
+			        <TextView
+			            a:layout_width="fill_parent"
+			            a:layout_height="wrap_content"
+			            a:layout_marginLeft="13dp"
+			            a:layout_marginBottom="14dp"
+			            a:text="인증번호가 1분 이상 도착하지 않을 경우\n인증번호 받기 버튼을 다시 클릭해주세요."
+			            a:text_eng="Certification number, if you do not get more than one minute button click again\nto receive certification number."
+			            a:textSize="21px"
+			            a:textColor="#999999"/>
+			        <TextView
+			            a:layout_width="fill_parent"
+			            a:layout_height="wrap_content"
+			            a:layout_marginLeft="13dp"
+			            a:layout_marginBottom="10dp"
+			            a:text="* 도토리 사용 인증 완료 후에는\n별도의 인증 절차 없이 도토리를 계속\n사용 할 수 있습니다."
+			            a:text_eng="* Once authentication is completed, an acorn without a separate authorization procedure can continue to use the acorn."
+			            a:textSize="21px"
+			            a:textColor="#999999"/>
+	            </LinearLayout>
+	            
+	        </ScrollView>
+        </LinearLayout>
+        
+        <LinearLayout 
+            a:orientation="horizontal"
+			a:layout_width="fill_parent"
+			a:layout_height="56dp"
+			a:layout_marginBottom="15dp">
+			<Button 
+			    a:id="dotoriSmsOkBtn"
+			    a:layout_marginLeft="10dp"
+				a:layout_width="131dp" 
+				a:layout_height="41dp" 
+				a:offImage_eng="btn_con_nor_e"
+				a:onImage_eng="btn_con_sel_e"
+				a:offImage="btn_con_nor" 
+				a:onImage="btn_con_sel"/>
+			<Button 
+			    a:layout_marginLeft="6dp"
+				a:layout_width="131dp" 
+				a:layout_height="41dp" 
+				a:offImage_eng="btn_cancel_nor_h_e" 
+				a:onImage_eng="btn_cancel_sel_h_e"
+				a:offImage="btn_cancel_nor_h" 
+				a:onImage="btn_cancel_sel_h"/>
+		</LinearLayout>
+		
+   	</LinearLayout>
+
+</LinearLayout>

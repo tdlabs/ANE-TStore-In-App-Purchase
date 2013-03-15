@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:a="http://schemas.a.com/apk/res/a"
+			    a:orientation="vertical"
+			    a:layout_width="fill_parent"
+			    a:layout_height="fill_parent"
+			    a:gravity="center">
+	    
+	    <LinearLayout a:orientation="vertical"
+		    		  a:layout_width="456dp"
+		    		  a:layout_height="220dp"
+	    			  a:background="popup_bg_all.9"
+	    			  a:layout_marginTop="20dp"
+		    		  a:layout_marginLeft="15dp">
+	    			  
+	    			  <ImageView a:background="pop_title"
+	    			  			a:background_eng="pop_title_e"
+						 		 a:layout_gravity="center"
+								 a:layout_width="72dp"
+								 a:layout_height="20dp"
+								 a:layout_marginTop="12dp"/>
+					
+					  <TextView  a:id = "HeaderMessage"
+							 	 a:layout_width="430dp" 
+								 a:layout_height="wrap_content"
+							 	 a:textSize="20pt"
+							 	 a:layout_marginTop="10dp"
+					 			 a:layout_marginLeft="10dp" 
+					 			 a:layout_marginRight="10dp"
+						 		 a:text=" 해당 상품 구입 시 T store에서 판매중인 정식판 어플리케이션과 동일한 상품임을 알려드리며, 고객님의 구매내역에서 확인 하실 수 있습니다."
+						 		 a:text_eng="when purchasing the goods offered for sale in the final version is the same product applications and to inform Your Excellency, your purchases can be "
+							 	 a:textColor="#CFCFCF"/>
+					  <LinearLayout a:orientation="horizontal"
+					 				a:layout_width="wrap_content"
+	    							a:layout_height="wrap_content">
+	    							
+	    			  				<LinearLayout a:background="info_table_02"
+												  a:layout_width="220dp"
+		    		  							  a:layout_height="105dp"
+		    		  							  a:layout_marginTop="10dp"
+		    									  a:layout_marginLeft="10dp"
+		    									  a:orientation="vertical">
+		    									  <LinearLayout   a:orientation="vertical"
+																  a:layout_width="120dp"
+										    					  a:layout_height="105dp"	
+																  a:layout_marginLeft="90dp">
+		    											<TextView a:layout_width="fill_parent"
+		    		 									  a:layout_height="wrap_content"
+		    		  	                                  a:layout_weight="1"
+		    		  	                                  a:textSize="22pt"
+		    		  									  a:id = "ItemName">
+		    											</TextView>
+		    											<TextView a:layout_width="fill_parent"
+		    		 									  a:layout_height="wrap_content"
+		    		 									  a:layout_weight="1"
+		    		  								   	  a:textSize="22pt"
+		    		  									  a:id = "ItemUseDate">
+		    											</TextView>
+		    											<TextView a:layout_width="fill_parent"
+		    		  									  a:layout_height="wrap_content"
+		    		  									  a:layout_weight="1"
+		    		  									  a:textSize="22pt"
+		    		  									  a:id = "ItemPrice"		    		  									 >
+		    											</TextView>
+		    									 </LinearLayout>
+		    						</LinearLayout>
+		    						
+		    						<LinearLayout a:layout_width="fill_parent" 
+		    									  a:layout_height="wrap_content" 
+		    									  a:orientation="vertical">
+				    					<ScrollView a:layout_width="200dp" 
+		    									  a:layout_height="50dp">
+					    				<LinearLayout	a:layout_width="fill_parent" 
+		    									  a:layout_height="wrap_content" 
+		    									  a:orientation="vertical">
+					    						<TextView a:layout_width="fill_parent" 
+									  					  a:layout_height="wrap_content" 
+									 					  a:layout_marginTop="12dp"
+									  					  a:layout_marginLeft="10dp"
+									  					  a:textSize="20pt"
+									   					  a:textColor="#999999" 
+								   	  					  a:text="* 결제하신 금액은 휴대폰 요금 고지서에 합산 청구 됩니다."
+								   	  					  a:text_eng="* The amount of your mobile phone bill payments are charged to the sum."/>
+								   	  			<!-- <TextView  
+												     	a:layout_width="fill_parent" 
+														a:layout_height="wrap_content"
+														a:layout_marginTop="10dp"
+														a:layout_marginLeft="10dp"
+														a:textSize="20pt" 
+														a:textColor="#999999" 
+														a:infotext=""/> 
+												<TextView  
+												     	a:layout_width="fill_parent" 
+														a:layout_height="wrap_content"
+														a:layout_marginTop="10dp"
+														a:layout_marginLeft="10dp"
+														a:textSize="20pt" 
+														a:textColor="#999999" 
+														a:loctbtntext=""/>
+												<LinearLayout   
+												a:layout_marginTop="10dp"
+												a:layout_width="fill_parent"
+												a:layout_height="wrap_content">
+												<Button 
+												    a:layout_width="98dp" 
+						   							a:layout_height="33dp"
+												    a:layout_marginLeft="10dp"
+												    a:gravity="center"
+											    	a:offImage="btn_locking_nor" 
+											    	a:onImage="btn_locking_sel"/>
+											</LinearLayout>-->			
+     										</LinearLayout>	
+     									</ScrollView>
+     		
+											<LinearLayout	a:orientation="horizontal"
+								    						a:layout_width="wrap_content"
+								    						a:layout_height="wrap_content"
+								    						a:layout_marginTop="15dp"
+								    						a:gravity="center"
+								    						a:layout_marginLeft="3dp">
+								    				<Button  	a:layout_width="100dp" 
+																a:layout_height="42dp"
+																a:offImage_eng="btn_buy_nor_h_e" 
+			    												a:onImage_eng="btn_buy_sel_h_e"
+													    		a:offImage="btn_buy_nor_h" 
+												    			a:onImage="btn_buy_sel_h"/> 
+									     			<Button 	a:layout_marginLeft="2dp"
+													    		a:layout_width="100dp" 
+													    		a:layout_height="42dp"
+													    		a:offImage_eng="btn_cancel_nor_h_e" 
+																a:onImage_eng="btn_cancel_sel_h_e"
+													    		a:offImage="btn_cancel_nor_h" 
+													   			a:onImage="btn_cancel_sel_h"/> 
+											</LinearLayout>		
+									     				<TextView  	a:id 	= "Version"
+									     							a:layout_marginLeft="10dp"
+								    						     	a:layout_width="fill_parent" 
+								     								a:layout_height="wrap_content" 
+								     								a:textSize="12pt"
+								     								a:textColor="#999999"/>
+							</LinearLayout>	   	  					  
+					  
+			    	  </LinearLayout>
+		</LinearLayout>
+</LinearLayout>

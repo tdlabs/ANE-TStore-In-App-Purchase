@@ -1,0 +1,86 @@
+<project name="TstoreIAPSample">
+	<property file="build_config"></property>
+	<target name="compile_debug_eng">
+		<copy file="${swf.dir}/TstoreIAPSample.swf" todir="../bin"></copy>
+		<exec executable="${sdk.home}/bin/adt" failonerror="true" dir="../bin">
+			<arg value="-package"/>
+			<arg value="-target"/>
+			<arg value="apk-captive-runtime"/>
+			<arg value="-storetype"/>
+			<arg value="pkcs12"/>
+			<arg value="-keystore"/>
+			<arg value="${android.keystore.file}"/>
+			<arg value="-storepass"/>
+			<arg value="${android.keystore.password}"/>
+			<arg value="${release.dir}/TstoreIAPSample_debug_eng.apk"/>
+			<arg value="TstoreIAPSample-app.xml"/>
+			<arg value="TstoreIAPSample.swf"/>
+			<arg value="-C"/>
+			<arg value="ui/debug-eng"/>
+			<arg value="res"/>
+			<arg value="-C"/>
+			<arg value="ui/debug-eng"/>
+			<arg value="xml"/>
+			<arg value="-C"/>
+			<arg value="ui/debug-eng"/>
+			<arg value="xml_kt_lg"/>
+			<arg line="-extdir ${ane.dir}/debug_eng"/>
+		</exec>
+	</target>
+
+	<target name="compile_debug">
+		<copy file="${swf.dir}/TstoreIAPSample.swf" todir="../bin"></copy>
+		<exec executable="${sdk.home}/bin/adt" failonerror="true" dir="../bin">
+			<arg value="-package"/>
+			<arg value="-target"/>
+			<arg value="apk-captive-runtime"/>
+			<arg value="-storetype"/>
+			<arg value="pkcs12"/>
+			<arg value="-keystore"/>
+			<arg value="${android.keystore.file}"/>
+			<arg value="-storepass"/>
+			<arg value="${android.keystore.password}"/>
+			<arg value="${release.dir}/TstoreIAPSample_debug.apk"/>
+			<arg value="TstoreIAPSample-app.xml"/>
+			<arg value="TstoreIAPSample.swf"/>
+			<arg value="-C"/>
+			<arg value="ui/debug"/>
+			<arg value="res"/>
+			<arg value="-C"/>
+			<arg value="ui/debug"/>
+			<arg value="xml"/>
+			<arg value="-C"/>
+			<arg value="ui/debug"/>
+			<arg value="xml_kt_lg"/>
+			<arg line="-extdir ${ane.dir}/debug"/>
+		</exec>
+	</target>
+
+	<target name="compile_release">
+		<copy file="${swf.dir}/TstoreIAPSample.swf" todir="../bin"></copy>
+		<exec executable="${sdk.home}/bin/adt" failonerror="true" dir="../bin">
+			<arg value="-package"/>
+			<arg value="-target"/>
+			<arg value="apk-captive-runtime"/>
+			<arg value="-storetype"/>
+			<arg value="pkcs12"/>
+			<arg value="-keystore"/>
+			<arg value="${android.keystore.file}"/>
+			<arg value="-storepass"/>
+			<arg value="${android.keystore.password}"/>
+			<arg value="${release.dir}/TstoreIAPSample.apk"/>
+			<arg value="TstoreIAPSample-app.xml"/>
+			<arg value="TstoreIAPSample.swf"/>
+			<arg value="-C"/>
+			<arg value="ui/release"/>
+			<arg value="res"/>
+			<arg value="-C"/>
+			<arg value="ui/release"/>
+			<arg value="xml"/>
+			<arg value="-C"/>
+			<arg value="ui/release"/>
+			<arg value="xml_kt_lg"/>
+			<arg line="-extdir ${ane.dir}/release"/>
+		</exec>
+	</target>
+</project>

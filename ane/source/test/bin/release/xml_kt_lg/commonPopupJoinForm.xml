@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:a="http://schemas.android.com/apk/res/android"
+  a:layout_width="fill_parent"
+  a:layout_height="fill_parent"
+  a:gravity="center"
+  >
+  
+  <LinearLayout
+  	a:orientation="vertical"
+  	a:background="popup_bg_all.9"
+  	a:layout_marginLeft="6dp"
+	a:padding="15dp"	   					
+	a:gravity="center"
+	a:layout_width="fill_parent"
+	a:layout_height="fill_parent"
+	>
+		
+		<ImageView
+			a:src="pop_title"
+			a:src_eng="pop_title_e"
+			a:layout_width="wrap_content"
+			a:layout_height="wrap_content"
+			a:gravity="center"/>
+		<ImageView
+			a:src="btn_check_ok_sel"
+			a:layout_width="wrap_content"
+			a:layout_height="wrap_content"
+			/>
+  		<ScrollView
+			a:layout_width="fill_parent"
+			a:layout_height="200dp">
+			<TextView
+				a:id="commonJoinFormMessage"
+				a:layout_width="wrap_content"
+				a:layout_height="wrap_content"
+				a:gravity="center"
+				a:text=""/>
+		</ScrollView>
+		<Button		
+			a:layout_marginTop="30dp"
+			a:layout_width="120dp" 
+			a:layout_height="41dp"
+			a:gravity="center"
+			a:offImage_eng="btn_con_nor_e"
+			a:onImage_eng="btn_con_sel_e"
+			a:offImage="btn_con_nor" 
+			a:onImage="btn_con_sel"		/>
+	</LinearLayout>
+</LinearLayout>
