@@ -2,7 +2,7 @@ ANE-TStore-In-App-Purchase
 -----------------------------------------------
 
 Copyright (c) Kingcraft  2013
-http://weibo.com/
+
 
 Licence Agreement (The MIT License)
 
