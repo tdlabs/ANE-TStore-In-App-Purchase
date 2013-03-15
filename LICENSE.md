@@ -1,7 +1,8 @@
 ANE-TStore-In-App-Purchase
 -----------------------------------------------
 
-Copyright (c) Kingcraft  2013
+Copyright (c) TDLabs  2013
+http://weibo.com/tdlabs
 
 
 Licence Agreement (The MIT License)
